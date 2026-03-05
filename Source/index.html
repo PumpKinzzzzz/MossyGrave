@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Your page title here :)</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/mossy-grave.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <h1>HTML Component Examples</h1>
+
+    <!-- Headings -->
+    <section id="headings">
+      <h2>Headings</h2>
+      <h1>Heading 1</h1>
+      <h2>Heading 2</h2>
+      <h3>Heading 3</h3>
+      <h4>Heading 4</h4>
+      <h5>Heading 5</h5>
+      <h6>Heading 6</h6>
+    </section>
+
+    <!-- Paragraphs -->
+    <section id="paragraphs">
+      <h2>Paragraphs</h2>
+      <p>This is a paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
+      <p>This is another paragraph with <strong>strong</strong>, <em>emphasized</em>, and <mark>marked</mark> text. We can also have <sub>subscript</sub> and <sup>superscript</sup> text. Here is some <del>deleted</del> and <ins>inserted</ins> text. <u>This text is underlined</u>, and this is a <small>small</small> text.</p>
+    </section>
+
+    <!-- Links -->
+    <section id="links">
+      <h2>Links</h2>
+      <a href="http://www.getskeleton.com">This is a link to Skeleton</a>
+    </section>
+
+    <!-- Buttons -->
+    <section id="buttons">
+        <h2>Buttons</h2>
+        <button class="button-primary">Primary Button</button>
+        <button>Default Button</button>
+        <button disabled>Disabled Button</button>
+    </section>
+
+    <!-- Lists -->
+    <section id="lists">
+      <h2>Lists</h2>
+      <h3>Unordered List</h3>
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2
+          <ul>
+            <li>Sub-item 2.1</li>
+            <li>Sub-item 2.2</li>
+          </ul>
+        </li>
+        <li>Item 3</li>
+      </ul>
+      <h3>Ordered List</h3>
+      <ol>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+      </ol>
+      <h3>Definition List</h3>
+      <dl>
+        <dt>HTML</dt>
+        <dd>HyperText Markup Language</dd>
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheets</dd>
+      </dl>
+    </section>
+
+    <!-- Tables -->
+    <section id="tables">
+      <h2>Tables</h2>
+      <table class="u-full-width">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Sex</th>
+            <th>Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Dave</td>
+            <td>25</td>
+            <td>Male</td>
+            <td>New York</td>
+          </tr>
+          <tr>
+            <td>Jane</td>
+            <td>23</td>
+            <td>Female</td>
+            <td>London</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Forms -->
+    <section id="forms">
+      <h2>Forms</h2>
+      <form>
+        <div class="row">
+          <div class="six columns">
+            <label for="exampleEmailInput">Your email</label>
+            <input class="u-full-width" type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
+          </div>
+          <div class="six columns">
+            <label for="exampleRecipientInput">Reason for contacting</label>
+            <select class="u-full-width" id="exampleRecipientInput">
+              <option value="Option 1">Questions</option>
+              <option value="Option 2">Admiration</option>
+              <option value="Option 3">Can I get your number?</option>
+            </select>
+          </div>
+        </div>
+        <label for="exampleMessage">Message</label>
+        <textarea class="u-full-width" placeholder="Hi Dave …" id="exampleMessage"></textarea>
+        
+        <label class="example-send-yourself-copy">
+          <input type="checkbox">
+          <span class="label-body">Send a copy to yourself</span>
+        </label>
+
+        <fieldset>
+            <legend>Radio Buttons</legend>
+            <label for="radio1"><input type="radio" id="radio1" name="radio-group"> Option 1</label>
+            <label for="radio2"><input type="radio" id="radio2" name="radio-group"> Option 2</label>
+        </fieldset>
+
+        <input class="button-primary" type="submit" value="Submit">
+      </form>
+    </section>
+
+    <!-- Images -->
+    <section id="images">
+        <h2>Images</h2>
+        <img src="images/favicon.png" alt="Favicon Image">
+    </section>
+
+    <!-- Blockquotes -->
+    <section id="blockquotes">
+        <h2>Blockquotes</h2>
+        <blockquote>
+            <p>The quick brown fox jumps over the lazy dog.</p>
+            <cite>Anonymous</cite>
+        </blockquote>
+    </section>
+
+    <!-- Code -->
+    <section id="code">
+        <h2>Code</h2>
+        <p>This is an example of inline <code>&lt;code&gt;</code>.</p>
+        <pre><code>// This is a block of code
+function helloWorld() {
+  console.log("Hello, World!");
+}</code></pre>
+    </section>
+
+    <!-- Miscellaneous -->
+    <section id="misc">
+        <h2>Miscellaneous</h2>
+        <hr>
+        <p>This is a paragraph after a horizontal rule.</p>
+        <details>
+            <summary>Details</summary>
+            <p>Something small enough to escape casual notice.</p>
+        </details>
+        <dialog open>
+            <p>This is an open dialog window.</p>
+        </dialog>
+        <p>Progress: <progress value="70" max="100">70 %</progress></p>
+        <p>Meter: <meter value="2" min="0" max="10">2 out of 10</meter></p>
+    </section>
+
+  </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
