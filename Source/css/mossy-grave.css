@@ -4,7 +4,7 @@
 
 :root {
   /* Couleurs - nommées par teinte comme Tailwind */
-  --mossy-cream: #F8F4F4;
+  --mossy-cream: #f8f3f3;
   --mossy-white: #ffffff;
   --mossy-dark: #373535;
   --mossy-gray: #E1E1E1;
@@ -20,7 +20,10 @@
   
   /* Dimensions */
   --navbar-height: 45px;
-  --sidebar-width: 220px;
+  --content-spacing: 1.5rem;
+  /* Polices */
+  --font-heading: 'Nunito', sans-serif;
+  --font-body: Verdana, Geneva, sans-serif;
 }
 
 
@@ -28,13 +31,19 @@
    BASE STYLES
    ============================================ */
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--navbar-height);
+}
+
 body {
-  font-family: 'Nunito', sans-serif;
+  font-family: var(--font-body);
   background-color: var(--mossy-cream);
   color: var(--mossy-dark);
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
   font-weight: 900;
   color: var(--mossy-dark);
 }
@@ -59,6 +68,8 @@ a:hover {
 
 .button.button-primary,
 button.button-primary {
+  font-family: var(--font-heading);
+  font-weight: 900;
   background-color: var(--mossy-cream);
   border-color: var(--mossy-dark);
   color: var(--mossy-dark);
@@ -66,10 +77,11 @@ button.button-primary {
 
 .button,
 button {
+  font-family: var(--font-heading);
+  font-weight: 900;
   background-color: var(--mossy-cream);
   border-color: var(--mossy-dark);
   color: var(--mossy-dark);
-
 }
 
 .button:hover,
@@ -162,6 +174,7 @@ input:focus {
   color: var(--mossy-cream);
   text-decoration: none;
   transition: background-color 0.2s ease;
+  font-family: var(--font-body);
   font-size: 0.9em;
 }
 
@@ -169,14 +182,6 @@ input:focus {
   background-color: var(--mossy-green-dark);
 }
 
-/* Indicateur dropdown */
-.top-navbar > li > a.has-submenu::after {
-  content: " ▼";
-  font-size: 0.8em;
-  margin-left: 5px;
-}
-
-/* Sous-menu dropdown */
 .top-navbar .submenu {
   position: absolute;
   top: 100%;
@@ -207,6 +212,7 @@ input:focus {
   text-decoration: none;
   transition: background-color 0.15s ease;
   border-bottom: 1px solid rgba(255,255,255,0.1);
+  font-family: var(--font-body);
   font-size: 0.85em;
 }
 
@@ -221,169 +227,26 @@ input:focus {
 
 
 /* ============================================
-   NAVIGATION - SIDE NAVBAR
-   ============================================ */
-
-.side-navbar {
-  position: fixed;
-  top: var(--navbar-height);
-  left: 0;
-  bottom: 0;
-  background-color: var(--mossy-white);
-  width: var(--sidebar-width);
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  border-right: 1px solid var(--mossy-gray);
-  overflow-y: auto;
-  z-index: 999;
-  font-family: 'Nunito', sans-serif;
-}
-
-.side-navbar > li {
-  position: relative;
-  border-bottom: 1px solid var(--mossy-gray);
-}
-
-.side-navbar > li:last-child {
-  border-bottom: none;
-}
-
-.side-navbar > li > a {
-  display: block;
-  padding: 10px 16px;
-  color: var(--mossy-dark);
-  text-decoration: none;
-  transition: all 0.2s ease;
-  font-size: 0.9em;
-  border-left: 3px solid transparent;
-}
-
-.side-navbar > li > a:hover {
-  background-color: var(--mossy-cream);
-  color: var(--mossy-green);
-  padding-left: 20px;
-  border-left-color: var(--mossy-green);
-}
-
-/* Indicateur dropdown - trait qui change de côté */
-.side-navbar > li > a.has-submenu {
-  border-right: 3px solid transparent;
-  border-left: 3px solid transparent;
-}
-
-.side-navbar > li:hover > a.has-submenu {
-  border-right-color: var(--mossy-green);
-  border-left-color: transparent;
-}
-
-/* Sous-menu accordéon */
-.side-navbar .submenu {
-  background-color: var(--mossy-cream);
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease;
-}
-
-.side-navbar > li:hover .submenu {
-  max-height: 500px;
-}
-
-.side-navbar .submenu li a {
-  display: block;
-  padding: 8px 16px 8px 32px;
-  color: var(--mossy-dark);
-  text-decoration: none;
-  font-size: 0.85em;
-  transition: all 0.15s ease;
-  border-left: 2px solid transparent;
-}
-
-.side-navbar .submenu li a:hover {
-  background-color: var(--mossy-white);
-  border-left-color: var(--mossy-green);
-  color: var(--mossy-green);
-  padding-left: 36px;
-}
-
-.side-navbar .submenu li a.active {
-  background-color: var(--mossy-green);
-  border-left-color: var(--mossy-green);
-  color: var(--mossy-cream);
-}
-
-
-/* ============================================
    NAVIGATION - LAYOUT HELPERS
    ============================================ */
 
-body.has-top-navbar.has-side-navbar {
+body.has-top-navbar {
   margin: 0;
   padding-top: var(--navbar-height);
-  padding-left: var(--sidebar-width);
+  padding-left: var(--content-spacing);
+  padding-right: var(--content-spacing);
   min-height: 100vh;
   box-sizing: border-box;
 }
 
-body.has-top-navbar.has-side-navbar > .container {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
+.container {
   max-width: 100%;
   width: 100%;
 }
 
-body.has-top-navbar:not(.has-side-navbar) {
-  margin: 0;
-  padding-top: var(--navbar-height);
-  min-height: 100vh;
-}
-
-body.has-side-navbar:not(.has-top-navbar) {
-  margin: 0;
-  padding-left: var(--sidebar-width);
-  min-height: 100vh;
-}
-
 @media (max-width: 768px) {
-  body.has-top-navbar.has-side-navbar {
-    padding-left: 0;
-    padding-top: calc(var(--navbar-height) + 50px);
+  body.has-top-navbar {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
-  
-  .side-navbar {
-    position: fixed;
-    top: var(--navbar-height);
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 50px;
-    bottom: auto;
-    border-right: none;
-    border-bottom: 1px solid var(--mossy-gray);
-    overflow-x: auto;
-    overflow-y: hidden;
-    white-space: nowrap;
-  }
-  
-  .side-navbar > li {
-    display: inline-block;
-    border-bottom: none;
-    border-right: 1px solid var(--mossy-gray);
-  }
-}
-
-.side-navbar.full-height {
-  top: 0;
-}
-
-body.has-side-navbar:not(.has-top-navbar) .side-navbar.full-height {
-  top: 0;
-}
-
-body.has-side-navbar:not(.has-top-navbar) {
-  padding-top: 0;
 }
