@@ -1,3 +1,7 @@
+/* ============================================
+   BASE STYLES
+   ============================================ */
+
 body {
   font-family: 'Nunito', sans-serif;
   background-color: #F8F4F4;
@@ -9,9 +13,23 @@ h1, h2, h3, h4, h5, h6 {
   color: #373535;
 }
 
+
+/* ============================================
+   LINKS
+   ============================================ */
+
 a {
   color: #879147;
 }
+
+a:hover {
+  color: #6d7438; /* Vert plus foncé pour le hover */
+}
+
+
+/* ============================================
+   BUTTONS
+   ============================================ */
 
 .button.button-primary,
 button.button-primary {
@@ -58,6 +76,10 @@ button.button-primary:focus {
     box-shadow: 0 0 0 0.2rem rgba(135, 145, 71, .5); /* Pickle green "glow" */
 }
 
+
+/* ============================================
+   FORMS
+   ============================================ */
 
 input[type="email"],
 input[type="number"],
