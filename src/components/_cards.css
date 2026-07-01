@@ -1,0 +1,102 @@
+/* ============================================
+   CARDS
+   ============================================ */
+
+.card {
+  background: var(--mossy-white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  padding: 1.5rem;
+  transition: box-shadow var(--transition-normal), transform var(--transition-normal);
+  margin-bottom: 1.5rem;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.card.clickable {
+  cursor: pointer;
+}
+
+.card.clickable:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Card header */
+.card-header {
+  margin: -1.5rem -1.5rem 1rem -1.5rem;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--mossy-gray-200);
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-black);
+  color: var(--mossy-dark);
+  background-color: var(--mossy-gray-100);
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+/* Card footer */
+.card-footer {
+  margin: 1rem -1.5rem -1.5rem -1.5rem;
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--mossy-gray-200);
+  background-color: var(--mossy-gray-100);
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+/* Card body */
+.card-body {
+  padding: 0;
+}
+
+.card-body > :last-child {
+  margin-bottom: 0;
+}
+
+/* Card variants */
+.card-primary {
+  border-left: 4px solid var(--mossy-green);
+}
+
+.card-success {
+  border-left: 4px solid var(--mossy-success);
+}
+
+.card-danger {
+  border-left: 4px solid var(--mossy-danger);
+}
+
+.card-warning {
+  border-left: 4px solid var(--mossy-warning);
+}
+
+.card-info {
+  border-left: 4px solid var(--mossy-info);
+}
+
+/* Card with image */
+.card-image {
+  margin: -1.5rem -1.5rem 1rem -1.5rem;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  display: block;
+}
+
+/* Card grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}

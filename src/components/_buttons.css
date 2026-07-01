@@ -1,0 +1,201 @@
+/* ============================================
+   BUTTONS
+   ============================================ */
+
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-black);
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: var(--border-radius);
+  border: 2px solid var(--mossy-dark);
+  background-color: var(--mossy-cream);
+  color: var(--mossy-dark);
+  transition: all var(--transition-fast);
+}
+
+/* Primary variant */
+.button.button-primary,
+button.button-primary {
+  background-color: var(--mossy-green);
+  border-color: var(--mossy-green);
+  color: var(--mossy-cream);
+}
+
+/* Secondary variant (default) */
+.button.button-secondary,
+button.button-secondary {
+  background-color: transparent;
+  border-color: var(--mossy-gray-400);
+  color: var(--mossy-dark);
+}
+
+/* Success variant */
+.button.button-success,
+button.button-success {
+  background-color: var(--mossy-success);
+  border-color: var(--mossy-success);
+  color: white;
+}
+
+/* Danger variant */
+.button.button-danger,
+button.button-danger {
+  background-color: var(--mossy-danger);
+  border-color: var(--mossy-danger);
+  color: white;
+}
+
+/* Warning variant */
+.button.button-warning,
+button.button-warning {
+  background-color: var(--mossy-warning);
+  border-color: var(--mossy-warning);
+  color: var(--mossy-dark);
+}
+
+/* Hover states */
+.button:hover,
+button:hover,
+input[type="submit"]:hover {
+  background-color: var(--mossy-green);
+  border-color: var(--mossy-green);
+  color: var(--mossy-cream);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+.button.button-primary:hover,
+button.button-primary:hover {
+  background-color: var(--mossy-green-600);
+  border-color: var(--mossy-green-600);
+  color: var(--mossy-cream);
+}
+
+.button.button-secondary:hover,
+button.button-secondary:hover {
+  background-color: var(--mossy-gray-200);
+  border-color: var(--mossy-gray-400);
+  color: var(--mossy-dark);
+}
+
+.button.button-success:hover,
+button.button-success:hover {
+  background-color: #449d44;
+  border-color: #449d44;
+}
+
+.button.button-danger:hover,
+button.button-danger:hover {
+  background-color: #c9302c;
+  border-color: #c9302c;
+}
+
+.button.button-warning:hover,
+button.button-warning:hover {
+  background-color: #ec971f;
+  border-color: #ec971f;
+}
+
+/* Disabled states */
+.button[disabled],
+button[disabled],
+input[type="submit"][disabled],
+.button[disabled]:hover,
+button[disabled]:hover {
+  background-color: var(--mossy-gray-200);
+  border-color: var(--mossy-gray-300);
+  color: var(--mossy-gray-400);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Focus states */
+.button:focus,
+button:focus,
+input[type="submit"]:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(135, 145, 71, 0.4);
+}
+
+.button-primary:focus,
+button.button-primary:focus {
+  box-shadow: 0 0 0 0.2rem rgba(135, 145, 71, 0.5);
+}
+
+/* Sizes */
+.button-sm,
+button-sm {
+  padding: 0.3rem 0.8rem;
+  font-size: 0.875rem;
+}
+
+.button-lg,
+button-lg {
+  padding: 0.8rem 1.8rem;
+  font-size: 1.125rem;
+}
+
+.button-block,
+button-block {
+  display: block;
+  width: 100%;
+}
+
+/* Outline variants */
+.button-outline,
+button-outline {
+  background: transparent;
+  border-color: var(--mossy-green);
+  color: var(--mossy-green);
+}
+
+.button-outline:hover,
+button-outline:hover {
+  background: var(--mossy-green);
+  color: var(--mossy-cream);
+}
+
+.button-outline-primary,
+button-outline-primary {
+  background: transparent;
+  border-color: var(--mossy-green);
+  color: var(--mossy-green);
+}
+
+.button-outline-primary:hover,
+button-outline-primary:hover {
+  background: var(--mossy-green);
+  color: var(--mossy-cream);
+}
+
+/* Link button */
+.button-link,
+button-link {
+  background: none;
+  border: none;
+  color: var(--mossy-green);
+  text-decoration: underline;
+  padding: 0;
+}
+
+.button-link:hover,
+button-link:hover {
+  background: none;
+  border: none;
+  color: var(--mossy-green-600);
+  transform: none;
+  box-shadow: none;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mossy Grave - Test</title>
+    
+    <!-- Importe ta lib depuis dist/ (le build) -->
+    <link rel="stylesheet" href="../dist/mossy-grave.css">
+    
+    <!-- OU depuis src/ (pour tester sans build) -->
+    <!-- <link rel="stylesheet" href="../src/mossy-grave.css"> -->
+</head>
+<body class="has-top-navbar">
+    
+    <!-- ===== NAVBAR ===== -->
+    <ul class="top-navbar">
+        <li><a href="#" class="navbar-brand">Mossy</a></li>
+        <li><a href="#">Accueil</a></li>
+        <li>
+            <a href="#">Produits</a>
+            <ul class="submenu">
+                <li><a href="#">Catégorie 1</a></li>
+                <li><a href="#">Catégorie 2</a></li>
+                <li><a href="#">Catégorie 3</a></li>
+            </ul>
+        </li>
+        <li><a href="#">À propos</a></li>
+        <li class="navbar-right"><a href="#">Contact</a></li>
+    </ul>
+
+    <!-- ===== CONTENU ===== -->
+    <div class="container mt-4">
+        <h1>Mossy Grave</h1>
+        <p class="lead">Cool ass Mossy lib</p>
+        <hr>
+
+        <!-- ===== BOUTONS ===== -->
+        <h2>Boutons</h2>
+        <div class="row">
+            <div class="col">
+                <button class="button">Default</button>
+                <button class="button button-primary">Primary</button>
+                <button class="button button-success">Success</button>
+                <button class="button button-danger">Danger</button>
+                <button class="button" disabled>Disabled</button>
+            </div>
+        </div>
+
+        <!-- ===== CARDS ===== -->
+        <h2>Cards</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <h3>Card 1</h3>
+                    <p>Une carte simple avec du contenu.</p>
+                    <button class="button button-primary">Action</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card card-primary">
+                    <h3>Card 2</h3>
+                    <p>Une carte avec une bordure verte.</p>
+                    <button class="button">Action</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== ALERTS ===== -->
+        <h2>Alertes</h2>
+        <div class="alert alert-success">
+            Succès ! Tout fonctionne bien.
+        </div>
+        <div class="alert alert-danger">
+            Erreur ! Quelque chose ne va pas.
+        </div>
+    </div>
+
+</body>
+</html>

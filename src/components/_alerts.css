@@ -1,0 +1,89 @@
+/* ============================================
+   ALERTS
+   ============================================ */
+
+.alert {
+  position: relative;
+  padding: 0.8rem 1.2rem;
+  margin-bottom: 1rem;
+  border-radius: var(--border-radius);
+  border: 1px solid transparent;
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
+
+.alert-primary {
+  background-color: rgba(135, 145, 71, 0.15);
+  border-color: var(--mossy-green);
+  color: var(--mossy-green-700);
+}
+
+.alert-secondary {
+  background-color: var(--mossy-gray-100);
+  border-color: var(--mossy-gray-300);
+  color: var(--mossy-gray-600);
+}
+
+.alert-success {
+  background-color: rgba(92, 184, 92, 0.15);
+  border-color: var(--mossy-success);
+  color: #3d8b3d;
+}
+
+.alert-danger {
+  background-color: rgba(217, 83, 79, 0.15);
+  border-color: var(--mossy-danger);
+  color: #a94442;
+}
+
+.alert-warning {
+  background-color: rgba(240, 173, 78, 0.15);
+  border-color: var(--mossy-warning);
+  color: #8a6d3b;
+}
+
+.alert-info {
+  background-color: rgba(91, 192, 222, 0.15);
+  border-color: var(--mossy-info);
+  color: #31708f;
+}
+
+/* Alert with icon */
+.alert-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.alert-icon::before {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+/* Dismissible alert */
+.alert-dismissible {
+  padding-right: 3rem;
+}
+
+.alert-dismissible .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.8rem 1.2rem;
+  font-size: 1.5rem;
+  line-height: 1;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  opacity: 0.6;
+  transition: opacity var(--transition-fast);
+}
+
+.alert-dismissible .close:hover {
+  opacity: 1;
+  background: none;
+  border: none;
+  transform: none;
+  box-shadow: none;
+}
