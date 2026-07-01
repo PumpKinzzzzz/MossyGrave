@@ -1,6 +1,5 @@
 # MossyGrave
-A CSS Boilerplate for my future project: Mossy Desk. Built with Skeleton CSS
-
+A CSS Boilerplate for my future project: Mossy Desk.
 ## Installation
 
 ### With npm
