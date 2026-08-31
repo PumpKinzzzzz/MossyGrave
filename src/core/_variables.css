@@ -5,16 +5,28 @@
 :root {
   /* ===== COLORS ===== */
   /* Raw palette */
-  --mossy-night: #2c1304;
-  --mossy-wood: #88451f;
-  --mossy-cream: #e5dcd4;
-  --mossy-autumn: #ff5643;
-  --mossy-salmon: #ff8c6e;
-  --mossy-light-salmon: #ffab87;
-  --mossy-green: #4d5313;
-  --mossy-green-light: #646b1f;
-  --mossy-green-lighter: #7c8337;
-  --mossy-river: #68a599;
+  --mossy-brown-1: #2c1304;
+  --mossy-brown-3: #88451f;
+  --mossy-brown-4: #ad7956;
+  --mossy-brown-5: #e9c495;
+
+  --mossy-grey-2: #8d837a;
+  --mossy-grey-3: #aca39c;
+  --mossy-grey-4: #e5dcd4;
+  --mossy-grey-5: #f5f2ee;
+
+  --mossy-salmon-2: #ff5643;
+  --mossy-salmon-3: #ff8c6e;
+  --mossy-salmon-4: #ffab87;
+
+  --mossy-green-1: #1f3204;
+  --mossy-green-2: #39470d;
+  --mossy-green-3: #646b1f;
+  --mossy-green-4: #8d923d;
+  --mossy-green-5: #b2b170;
+
+  --mossy-blue-3: #68a599;
+  --mossy-blue-4: #83b5ac;
 
   /* ===== DIMENSIONS ===== */
   --sidebar-width: 220px;

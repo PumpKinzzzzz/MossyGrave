@@ -25,7 +25,7 @@
 }
 
 .modal {
-  background: var(--mossy-cream);
+  background: var(--mossy-grey-4);
   border-radius: var(--border-radius-lg);
   max-width: 500px;
   width: 100%;
@@ -42,7 +42,7 @@
 
 .modal-header {
   padding: 1.2rem 1.5rem;
-  border-bottom: 1px solid var(--mossy-light-salmon);
+  border-bottom: 1px solid var(--mossy-salmon-4);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -53,7 +53,7 @@
   margin: 0;
   font-family: var(--font-heading);
   font-weight: var(--font-weight-black);
-  color: var(--mossy-night);
+  color: var(--mossy-brown-1);
 }
 
 .modal-close {
@@ -62,13 +62,13 @@
   font-size: 1.5rem;
   line-height: 1;
   cursor: pointer;
-  color: var(--mossy-wood);
+  color: var(--mossy-brown-3);
   padding: 0;
   transition: color var(--transition-fast);
 }
 
 .modal-close:hover {
-  color: var(--mossy-night);
+  color: var(--mossy-brown-1);
   background: none;
   border: none;
   transform: none;
@@ -85,7 +85,7 @@
 
 .modal-footer {
   padding: 1rem 1.5rem;
-  border-top: 1px solid var(--mossy-light-salmon);
+  border-top: 1px solid var(--mossy-salmon-4);
   display: flex;
   justify-content: flex-end;
   gap: 0.5rem;

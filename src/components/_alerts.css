@@ -14,37 +14,37 @@
 
 .alert-primary {
   background-color: rgba(135, 145, 71, 0.15);
-  border-color: var(--mossy-green);
-  color: var(--mossy-green-lighter);
+  border-color: var(--mossy-green-3);
+  color: var(--mossy-green-5);
 }
 
 .alert-secondary {
-  background-color: var(--mossy-cream);
-  border-color: var(--mossy-salmon);
-  color: var(--mossy-green);
+  background-color: var(--mossy-grey-4);
+  border-color: var(--mossy-salmon-3);
+  color: var(--mossy-green-3);
 }
 
 .alert-success {
   background-color: rgba(92, 184, 92, 0.15);
-  border-color: var(--mossy-river);
+  border-color: var(--mossy-blue-3);
   color: #3d8b3d;
 }
 
 .alert-danger {
   background-color: rgba(217, 83, 79, 0.15);
-  border-color: var(--mossy-autumn);
+  border-color: var(--mossy-salmon-2);
   color: #a94442;
 }
 
 .alert-warning {
   background-color: rgba(240, 173, 78, 0.15);
-  border-color: var(--mossy-salmon);
+  border-color: var(--mossy-salmon-3);
   color: #8a6d3b;
 }
 
 .alert-info {
   background-color: rgba(91, 192, 222, 0.15);
-  border-color: var(--mossy-river);
+  border-color: var(--mossy-blue-3);
   color: #31708f;
 }
 

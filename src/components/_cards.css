@@ -3,7 +3,7 @@
    ============================================ */
 
 .card {
-  background: var(--mossy-cream);
+  background: var(--mossy-grey-4);
   border-radius: var(--border-radius);
   box-shadow: var(--shadow-sm);
   padding: 1.5rem;
@@ -31,8 +31,8 @@
   border-bottom: 1px solid var(--mossy-light-salmon);
   font-family: var(--font-heading);
   font-weight: var(--font-weight-black);
-  color: var(--mossy-night);
-  background-color: var(--mossy-cream);
+  color: var(--mossy-brown-1);
+  background-color: var(--mossy-grey-4);
   border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 
@@ -41,7 +41,7 @@
   margin: 1rem -1.5rem -1.5rem -1.5rem;
   padding: 1rem 1.5rem;
   border-top: 1px solid var(--mossy-light-salmon);
-  background-color: var(--mossy-cream);
+  background-color: var(--mossy-grey-4);
   border-radius: 0 0 var(--border-radius) var(--border-radius);
 }
 
@@ -56,23 +56,23 @@
 
 /* Card variants */
 .card-primary {
-  border-left: 4px solid var(--mossy-green);
+  border-left: 4px solid var(--mossy-green-3);
 }
 
 .card-success {
-  border-left: 4px solid var(--mossy-river);
+  border-left: 4px solid var(--mossy-blue-3);
 }
 
 .card-danger {
-  border-left: 4px solid var(--mossy-autumn);
+  border-left: 4px solid var(--mossy-salmon-2);
 }
 
 .card-warning {
-  border-left: 4px solid var(--mossy-salmon);
+  border-left: 4px solid var(--mossy-salmon-3);
 }
 
 .card-info {
-  border-left: 4px solid var(--mossy-river);
+  border-left: 4px solid var(--mossy-blue-3);
 }
 
 /* Card with image */

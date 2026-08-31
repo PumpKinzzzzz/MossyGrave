@@ -12,7 +12,7 @@
   left: 0;
   bottom: 0;
   width: var(--sidebar-width);
-  background-color: var(--mossy-green);
+  background-color: var(--mossy-green-2);
   box-shadow: var(--shadow-md);
   z-index: var(--z-fixed);
   display: flex;
@@ -28,7 +28,7 @@
   align-items: center;
   gap: 0.5rem;
   padding: 1rem;
-  color: var(--mossy-cream);
+  color: var(--mossy-grey-5);
   font-family: var(--font-heading);
   font-weight: var(--font-weight-black);
   font-size: 1.2rem;
@@ -36,7 +36,7 @@
 }
 
 .sidebar-brand:hover {
-  background-color: var(--mossy-green-light);
+  background-color: var(--mossy-green-3);
 }
 
 /* Nav list */
@@ -56,7 +56,7 @@
   align-items: center;
   gap: 0.75rem;
   padding: 10px 18px;
-  color: var(--mossy-cream);
+  color: var(--mossy-grey-5);
   text-decoration: none;
   transition: background-color var(--transition-fast);
   font-family: var(--font-body);
@@ -66,13 +66,13 @@
 
 .sidebar-link:hover,
 .sidebar-link:focus {
-  background-color: var(--mossy-green-light);
-  color: var(--mossy-cream);
+  background-color: var(--mossy-green-3);
+  color: var(--mossy-grey-5);
 }
 
 /* Active state */
 .sidebar-link.active {
-  background-color: var(--mossy-green-lighter);
+  background-color: var(--mossy-green-3);
   font-weight: var(--font-weight-bold);
 }
 

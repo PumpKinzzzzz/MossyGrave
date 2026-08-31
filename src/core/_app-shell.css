@@ -13,8 +13,8 @@
   font-family: var(--font-body);
   font-size: 1rem;
   line-height: var(--line-height-base);
-  background-color: var(--mossy-cream);
-  color: var(--mossy-night);
+  background-color: var(--mossy-grey-4);
+  color: var(--mossy-brown-1);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -22,8 +22,8 @@
 /* ===== SELECTION ===== */
 /* Apply to any container, e.g. <body class="selection"> */
 .selection::selection {
-  background: var(--mossy-green);
-  color: var(--mossy-cream);
+  background: var(--mossy-green-3);
+  color: var(--mossy-grey-5);
 }
 
 /* ===== SCROLLBAR ===== */
@@ -34,16 +34,16 @@
 }
 
 .scrollbar::-webkit-scrollbar-track {
-  background: var(--mossy-cream);
+  background: var(--mossy-grey-4);
 }
 
 .scrollbar::-webkit-scrollbar-thumb {
-  background: var(--mossy-green);
+  background: var(--mossy-green-3);
   border-radius: var(--border-radius);
 }
 
 .scrollbar::-webkit-scrollbar-thumb:hover {
-  background: var(--mossy-green-light);
+  background: var(--mossy-green-4);
 }
 
 /* ===== SMOOTH SCROLL ===== */

@@ -5,16 +5,28 @@
 :root {
   /* ===== COLORS ===== */
   /* Raw palette */
-  --mossy-night: #2c1304;
-  --mossy-wood: #88451f;
-  --mossy-cream: #e5dcd4;
-  --mossy-autumn: #ff5643;
-  --mossy-salmon: #ff8c6e;
-  --mossy-light-salmon: #ffab87;
-  --mossy-green: #4d5313;
-  --mossy-green-light: #646b1f;
-  --mossy-green-lighter: #7c8337;
-  --mossy-river: #68a599;
+  --mossy-brown-1: #2c1304;
+  --mossy-brown-3: #88451f;
+  --mossy-brown-4: #ad7956;
+  --mossy-brown-5: #e9c495;
+
+  --mossy-grey-2: #8d837a;
+  --mossy-grey-3: #aca39c;
+  --mossy-grey-4: #e5dcd4;
+  --mossy-grey-5: #f5f2ee;
+
+  --mossy-salmon-2: #ff5643;
+  --mossy-salmon-3: #ff8c6e;
+  --mossy-salmon-4: #ffab87;
+
+  --mossy-green-1: #1f3204;
+  --mossy-green-2: #39470d;
+  --mossy-green-3: #646b1f;
+  --mossy-green-4: #8d923d;
+  --mossy-green-5: #b2b170;
+
+  --mossy-blue-3: #68a599;
+  --mossy-blue-4: #83b5ac;
 
   /* ===== DIMENSIONS ===== */
   --sidebar-width: 220px;
@@ -119,8 +131,8 @@ html {
   font-family: var(--font-body);
   font-size: 1rem;
   line-height: var(--line-height-base);
-  background-color: var(--mossy-cream);
-  color: var(--mossy-night);
+  background-color: var(--mossy-grey-4);
+  color: var(--mossy-brown-1);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -128,8 +140,8 @@ html {
 /* ===== SELECTION ===== */
 /* Apply to any container, e.g. <body class="selection"> */
 .selection::selection {
-  background: var(--mossy-green);
-  color: var(--mossy-cream);
+  background: var(--mossy-green-3);
+  color: var(--mossy-grey-5);
 }
 
 /* ===== SCROLLBAR ===== */
@@ -140,16 +152,16 @@ html {
 }
 
 .scrollbar::-webkit-scrollbar-track {
-  background: var(--mossy-cream);
+  background: var(--mossy-grey-4);
 }
 
 .scrollbar::-webkit-scrollbar-thumb {
-  background: var(--mossy-green);
+  background: var(--mossy-green-3);
   border-radius: var(--border-radius);
 }
 
 .scrollbar::-webkit-scrollbar-thumb:hover {
-  background: var(--mossy-green-light);
+  background: var(--mossy-green-4);
 }
 
 /* ===== SMOOTH SCROLL ===== */
@@ -172,37 +184,37 @@ html {
 
 .alert-primary {
   background-color: rgba(135, 145, 71, 0.15);
-  border-color: var(--mossy-green);
-  color: var(--mossy-green-lighter);
+  border-color: var(--mossy-green-3);
+  color: var(--mossy-green-5);
 }
 
 .alert-secondary {
-  background-color: var(--mossy-cream);
-  border-color: var(--mossy-salmon);
-  color: var(--mossy-green);
+  background-color: var(--mossy-grey-4);
+  border-color: var(--mossy-salmon-3);
+  color: var(--mossy-green-3);
 }
 
 .alert-success {
   background-color: rgba(92, 184, 92, 0.15);
-  border-color: var(--mossy-river);
+  border-color: var(--mossy-blue-3);
   color: #3d8b3d;
 }
 
 .alert-danger {
   background-color: rgba(217, 83, 79, 0.15);
-  border-color: var(--mossy-autumn);
+  border-color: var(--mossy-salmon-2);
   color: #a94442;
 }
 
 .alert-warning {
   background-color: rgba(240, 173, 78, 0.15);
-  border-color: var(--mossy-salmon);
+  border-color: var(--mossy-salmon-3);
   color: #8a6d3b;
 }
 
 .alert-info {
   background-color: rgba(91, 192, 222, 0.15);
-  border-color: var(--mossy-river);
+  border-color: var(--mossy-blue-3);
   color: #31708f;
 }
 
@@ -256,76 +268,76 @@ html {
   font-size: 1rem;
   line-height: 1.5;
   border-radius: var(--border-radius);
-  border: 2px solid var(--mossy-night);
-  background-color: var(--mossy-cream);
-  color: var(--mossy-night);
+  border: 2px solid var(--mossy-brown-1);
+  background-color: var(--mossy-grey-4);
+  color: var(--mossy-brown-1);
   transition: all var(--transition-fast);
 }
 
 /* Primary variant */
 .button-primary {
-  background-color: var(--mossy-green);
-  border-color: var(--mossy-green);
-  color: var(--mossy-cream);
+  background-color: var(--mossy-green-3);
+  border-color: var(--mossy-green-3);
+  color: var(--mossy-grey-5);
 }
 
 /* Secondary variant (default) */
 .button-secondary {
   background-color: transparent;
-  border-color: var(--mossy-green-lighter);
-  color: var(--mossy-night);
+  border-color: var(--mossy-green-5);
+  color: var(--mossy-brown-1);
 }
 
 /* Success variant */
 .button-success {
-  background-color: var(--mossy-river);
-  border-color: var(--mossy-river);
+  background-color: var(--mossy-blue-3);
+  border-color: var(--mossy-blue-3);
   color: white;
 }
 
 /* Danger variant */
 .button-danger {
-  background-color: var(--mossy-autumn);
-  border-color: var(--mossy-autumn);
+  background-color: var(--mossy-salmon-2);
+  border-color: var(--mossy-salmon-2);
   color: white;
 }
 
 /* Warning variant */
 .button-warning {
-  background-color: var(--mossy-salmon);
-  border-color: var(--mossy-salmon);
-  color: var(--mossy-night);
+  background-color: var(--mossy-salmon-3);
+  border-color: var(--mossy-salmon-3);
+  color: var(--mossy-brown-1);
 }
 
 /* Hover states */
 .button:hover {
-  background-color: var(--mossy-green);
-  border-color: var(--mossy-green);
-  color: var(--mossy-cream);
+  background-color: var(--mossy-green-3);
+  border-color: var(--mossy-green-3);
+  color: var(--mossy-grey-5);
   transform: translateY(-1px);
   box-shadow: var(--shadow-sm);
 }
 
 .button-primary:hover {
-  background-color: var(--mossy-green-light);
-  border-color: var(--mossy-green-light);
-  color: var(--mossy-cream);
+  background-color: var(--mossy-green-4);
+  border-color: var(--mossy-green-4);
+  color: var(--mossy-grey-5);
 }
 
 .button-secondary:hover {
-  background-color: var(--mossy-light-salmon);
-  border-color: var(--mossy-green-lighter);
-  color: var(--mossy-night);
+  background-color: var(--mossy-salmon-4);
+  border-color: var(--mossy-green-5);
+  color: var(--mossy-brown-1);
 }
 
 .button-success:hover {
-  background-color: #449d44;
-  border-color: #449d44;
+  background-color: var(--mossy-blue-4);
+  border-color: var(--mossy-blue-4);
 }
 
 .button-danger:hover {
-  background-color: #c9302c;
-  border-color: #c9302c;
+  background-color: var(--mossy-salmon-3);
+  border-color: var(--mossy-salmon-3);
 }
 
 .button-warning:hover {
@@ -336,9 +348,9 @@ html {
 /* Disabled states */
 .button[disabled],
 .button[disabled]:hover {
-  background-color: var(--mossy-light-salmon);
-  border-color: var(--mossy-salmon);
-  color: var(--mossy-green-lighter);
+  background-color: var(--mossy-grey-3);
+  border-color: var(--mossy-grey-2);
+  color: var(--mossy-grey-4);
   cursor: not-allowed;
   transform: none;
   box-shadow: none;
@@ -374,21 +386,21 @@ html {
 .button-outline,
 .button-outline-primary {
   background: transparent;
-  border-color: var(--mossy-green);
-  color: var(--mossy-green);
+  border-color: var(--mossy-green-3);
+  color: var(--mossy-green-3);
 }
 
 .button-outline:hover,
 .button-outline-primary:hover {
-  background: var(--mossy-green);
-  color: var(--mossy-cream);
+  background: var(--mossy-green-3);
+  color: var(--mossy-grey-5);
 }
 
 /* Link button */
 .button-link {
   background: none;
   border: none;
-  color: var(--mossy-green);
+  color: var(--mossy-green-3);
   text-decoration: underline;
   padding: 0;
 }
@@ -396,7 +408,7 @@ html {
 .button-link:hover {
   background: none;
   border: none;
-  color: var(--mossy-green-light);
+  color: var(--mossy-green-4);
   transform: none;
   box-shadow: none;
 }
@@ -405,7 +417,7 @@ html {
    ============================================ */
 
 .card {
-  background: var(--mossy-cream);
+  background: var(--mossy-grey-4);
   border-radius: var(--border-radius);
   box-shadow: var(--shadow-sm);
   padding: 1.5rem;
@@ -433,8 +445,8 @@ html {
   border-bottom: 1px solid var(--mossy-light-salmon);
   font-family: var(--font-heading);
   font-weight: var(--font-weight-black);
-  color: var(--mossy-night);
-  background-color: var(--mossy-cream);
+  color: var(--mossy-brown-1);
+  background-color: var(--mossy-grey-4);
   border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 
@@ -443,7 +455,7 @@ html {
   margin: 1rem -1.5rem -1.5rem -1.5rem;
   padding: 1rem 1.5rem;
   border-top: 1px solid var(--mossy-light-salmon);
-  background-color: var(--mossy-cream);
+  background-color: var(--mossy-grey-4);
   border-radius: 0 0 var(--border-radius) var(--border-radius);
 }
 
@@ -458,23 +470,23 @@ html {
 
 /* Card variants */
 .card-primary {
-  border-left: 4px solid var(--mossy-green);
+  border-left: 4px solid var(--mossy-green-3);
 }
 
 .card-success {
-  border-left: 4px solid var(--mossy-river);
+  border-left: 4px solid var(--mossy-blue-3);
 }
 
 .card-danger {
-  border-left: 4px solid var(--mossy-autumn);
+  border-left: 4px solid var(--mossy-salmon-2);
 }
 
 .card-warning {
-  border-left: 4px solid var(--mossy-salmon);
+  border-left: 4px solid var(--mossy-salmon-3);
 }
 
 .card-info {
-  border-left: 4px solid var(--mossy-river);
+  border-left: 4px solid var(--mossy-blue-3);
 }
 
 /* Card with image */
@@ -507,15 +519,15 @@ html {
 
 .code {
   font-family: 'Courier New', monospace;
-  background: var(--mossy-cream);
+  background: var(--mossy-grey-4);
   padding: 0.2rem 0.4rem;
   border-radius: var(--border-radius);
   font-size: 0.875em;
-  color: var(--mossy-green-lighter);
+  color: var(--mossy-green-5);
 }
 
 .code-block {
-  background: var(--mossy-cream);
+  background: var(--mossy-grey-4);
   padding: 1rem;
   border-radius: var(--border-radius);
   overflow-x: auto;
@@ -525,7 +537,7 @@ html {
 .code-block .code {
   background: none;
   padding: 0;
-  color: var(--mossy-night);
+  color: var(--mossy-brown-1);
 }
 /* ============================================
    FORMS
@@ -545,9 +557,9 @@ html {
   padding: 0.6rem 0.8rem;
   font-size: 1rem;
   line-height: 1.5;
-  color: var(--mossy-night);
-  background-color: var(--mossy-cream);
-  border: 2px solid var(--mossy-light-salmon);
+  color: var(--mossy-brown-1);
+  background-color: var(--mossy-grey-4);
+  border: 2px solid var(--mossy-salmon-5);
   border-radius: var(--border-radius);
   transition: border-color var(--transition-fast);
   font-family: var(--font-body);
@@ -561,13 +573,13 @@ textarea.input {
 /* Focus states */
 .input:focus {
   outline: 0;
-  border-color: var(--mossy-green);
+  border-color: var(--mossy-green-3);
   box-shadow: 0 0 0 0.2rem rgba(135, 145, 71, 0.15);
 }
 
 /* Invalid states */
 .input:invalid {
-  border-color: var(--mossy-autumn);
+  border-color: var(--mossy-salmon-2);
 }
 
 .input:invalid:focus {
@@ -576,7 +588,7 @@ textarea.input {
 
 /* Disabled states */
 .input:disabled {
-  background-color: var(--mossy-cream);
+  background-color: var(--mossy-grey-4);
   cursor: not-allowed;
   opacity: 0.6;
 }
@@ -586,7 +598,7 @@ textarea.input {
   display: inline-block;
   width: auto;
   margin-right: 0.4rem;
-  accent-color: var(--mossy-green);
+  accent-color: var(--mossy-green-3);
   cursor: pointer;
 }
 
@@ -611,14 +623,14 @@ textarea.input {
   display: block;
   margin-top: 0.3rem;
   font-size: 0.875rem;
-  color: var(--mossy-wood);
+  color: var(--mossy-brown-3);
 }
 
 .form-group .form-error {
   display: block;
   margin-top: 0.3rem;
   font-size: 0.875rem;
-  color: var(--mossy-autumn);
+  color: var(--mossy-salmon-2);
 }
 
 /* Inline forms */
@@ -661,7 +673,7 @@ textarea.input {
 
 /* Form validation states */
 .is-valid {
-  border-color: var(--mossy-river) !important;
+  border-color: var(--mossy-blue-3) !important;
 }
 
 .is-valid:focus {
@@ -669,7 +681,7 @@ textarea.input {
 }
 
 .is-invalid {
-  border-color: var(--mossy-autumn) !important;
+  border-color: var(--mossy-salmon-2) !important;
 }
 
 .is-invalid:focus {
@@ -741,7 +753,7 @@ textarea.input {
 }
 
 .modal {
-  background: var(--mossy-cream);
+  background: var(--mossy-grey-4);
   border-radius: var(--border-radius-lg);
   max-width: 500px;
   width: 100%;
@@ -758,7 +770,7 @@ textarea.input {
 
 .modal-header {
   padding: 1.2rem 1.5rem;
-  border-bottom: 1px solid var(--mossy-light-salmon);
+  border-bottom: 1px solid var(--mossy-salmon-4);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -769,7 +781,7 @@ textarea.input {
   margin: 0;
   font-family: var(--font-heading);
   font-weight: var(--font-weight-black);
-  color: var(--mossy-night);
+  color: var(--mossy-brown-1);
 }
 
 .modal-close {
@@ -778,13 +790,13 @@ textarea.input {
   font-size: 1.5rem;
   line-height: 1;
   cursor: pointer;
-  color: var(--mossy-wood);
+  color: var(--mossy-brown-3);
   padding: 0;
   transition: color var(--transition-fast);
 }
 
 .modal-close:hover {
-  color: var(--mossy-night);
+  color: var(--mossy-brown-1);
   background: none;
   border: none;
   transform: none;
@@ -801,7 +813,7 @@ textarea.input {
 
 .modal-footer {
   padding: 1rem 1.5rem;
-  border-top: 1px solid var(--mossy-light-salmon);
+  border-top: 1px solid var(--mossy-salmon-4);
   display: flex;
   justify-content: flex-end;
   gap: 0.5rem;
@@ -846,7 +858,7 @@ textarea.input {
   left: 0;
   bottom: 0;
   width: var(--sidebar-width);
-  background-color: var(--mossy-green);
+  background-color: var(--mossy-green-2);
   box-shadow: var(--shadow-md);
   z-index: var(--z-fixed);
   display: flex;
@@ -862,7 +874,7 @@ textarea.input {
   align-items: center;
   gap: 0.5rem;
   padding: 1rem;
-  color: var(--mossy-cream);
+  color: var(--mossy-grey-5);
   font-family: var(--font-heading);
   font-weight: var(--font-weight-black);
   font-size: 1.2rem;
@@ -870,7 +882,7 @@ textarea.input {
 }
 
 .sidebar-brand:hover {
-  background-color: var(--mossy-green-light);
+  background-color: var(--mossy-green-3);
 }
 
 /* Nav list */
@@ -890,7 +902,7 @@ textarea.input {
   align-items: center;
   gap: 0.75rem;
   padding: 10px 18px;
-  color: var(--mossy-cream);
+  color: var(--mossy-grey-5);
   text-decoration: none;
   transition: background-color var(--transition-fast);
   font-family: var(--font-body);
@@ -900,13 +912,13 @@ textarea.input {
 
 .sidebar-link:hover,
 .sidebar-link:focus {
-  background-color: var(--mossy-green-light);
-  color: var(--mossy-cream);
+  background-color: var(--mossy-green-3);
+  color: var(--mossy-grey-5);
 }
 
 /* Active state */
 .sidebar-link.active {
-  background-color: var(--mossy-green-lighter);
+  background-color: var(--mossy-green-3);
   font-weight: var(--font-weight-bold);
 }
 
@@ -950,13 +962,13 @@ body.has-sidebar {
 .table th,
 .table td {
   padding: 0.75rem;
-  border-bottom: 1px solid var(--mossy-light-salmon);
+  border-bottom: 1px solid var(--mossy-salmon-4);
   text-align: left;
 }
 
 .table th {
   font-weight: var(--font-weight-bold);
-  background-color: var(--mossy-cream);
+  background-color: var(--mossy-grey-4);
 }
 /* ============================================
    TYPOGRAPHY
@@ -970,7 +982,7 @@ body.has-sidebar {
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: var(--font-heading);
   font-weight: var(--font-weight-black);
-  color: var(--mossy-night);
+  color: var(--mossy-brown-1);
   margin-top: 0;
   margin-bottom: 0.5rem;
   line-height: 1.2;
@@ -985,34 +997,34 @@ body.has-sidebar {
 
 /* ===== LINKS ===== */
 .link {
-  color: var(--mossy-green);
+  color: var(--mossy-green-3);
   text-decoration: none;
   transition: color var(--transition-fast);
 }
 
 .link:hover {
-  color: var(--mossy-green-light);
+  color: var(--mossy-green-4);
   text-decoration: underline;
 }
 
 .link:focus {
   outline: 0;
-  color: var(--mossy-green-lighter);
+  color: var(--mossy-green-5);
 }
 
 /* ===== DIVIDER ===== */
 .divider {
   margin: 1.5rem 0;
   border: 0;
-  border-top: 1px solid var(--mossy-light-salmon);
+  border-top: 1px solid var(--mossy-brown-4);
 }
 
 /* ===== BLOCKQUOTE ===== */
 .blockquote {
   margin: 1.5rem 0;
   padding: 0.5rem 1.5rem;
-  border-left: 4px solid var(--mossy-green);
-  background: var(--mossy-cream);
+  border-left: 4px solid var(--mossy-green-3);
+  background: var(--mossy-grey-4);
   border-radius: 0 var(--border-radius) var(--border-radius) 0;
 }
 
@@ -1022,7 +1034,7 @@ body.has-sidebar {
 
 .blockquote footer {
   margin-top: 0.5rem;
-  color: var(--mossy-wood);
+  color: var(--mossy-brown-3);
   font-size: 0.875rem;
 }
 
@@ -1075,7 +1087,7 @@ body.has-sidebar {
 .lead {
   font-size: 1.25rem;
   font-weight: var(--font-weight-normal);
-  color: var(--mossy-green);
+  color: var(--mossy-green-3);
 }
 
 /* ===== SMALL ===== */
@@ -1085,7 +1097,7 @@ body.has-sidebar {
 
 /* ===== MARK ===== */
 .mark {
-  background-color: var(--mossy-light-salmon);
+  background-color: var(--mossy-salmon-4);
   padding: 0.1rem 0.3rem;
   border-radius: var(--border-radius);
 }
@@ -1098,8 +1110,8 @@ body.has-sidebar {
 
 /* ===== KBD ===== */
 .kbd {
-  background: var(--mossy-night);
-  color: var(--mossy-cream);
+  background: var(--mossy-brown-1);
+  color: var(--mossy-grey-5);
   padding: 0.2rem 0.6rem;
   border-radius: var(--border-radius);
   font-size: 0.875rem;

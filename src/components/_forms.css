@@ -16,9 +16,9 @@
   padding: 0.6rem 0.8rem;
   font-size: 1rem;
   line-height: 1.5;
-  color: var(--mossy-night);
-  background-color: var(--mossy-cream);
-  border: 2px solid var(--mossy-light-salmon);
+  color: var(--mossy-brown-1);
+  background-color: var(--mossy-grey-4);
+  border: 2px solid var(--mossy-salmon-5);
   border-radius: var(--border-radius);
   transition: border-color var(--transition-fast);
   font-family: var(--font-body);
@@ -32,13 +32,13 @@ textarea.input {
 /* Focus states */
 .input:focus {
   outline: 0;
-  border-color: var(--mossy-green);
+  border-color: var(--mossy-green-3);
   box-shadow: 0 0 0 0.2rem rgba(135, 145, 71, 0.15);
 }
 
 /* Invalid states */
 .input:invalid {
-  border-color: var(--mossy-autumn);
+  border-color: var(--mossy-salmon-2);
 }
 
 .input:invalid:focus {
@@ -47,7 +47,7 @@ textarea.input {
 
 /* Disabled states */
 .input:disabled {
-  background-color: var(--mossy-cream);
+  background-color: var(--mossy-grey-4);
   cursor: not-allowed;
   opacity: 0.6;
 }
@@ -57,7 +57,7 @@ textarea.input {
   display: inline-block;
   width: auto;
   margin-right: 0.4rem;
-  accent-color: var(--mossy-green);
+  accent-color: var(--mossy-green-3);
   cursor: pointer;
 }
 
@@ -82,14 +82,14 @@ textarea.input {
   display: block;
   margin-top: 0.3rem;
   font-size: 0.875rem;
-  color: var(--mossy-wood);
+  color: var(--mossy-brown-3);
 }
 
 .form-group .form-error {
   display: block;
   margin-top: 0.3rem;
   font-size: 0.875rem;
-  color: var(--mossy-autumn);
+  color: var(--mossy-salmon-2);
 }
 
 /* Inline forms */
@@ -132,7 +132,7 @@ textarea.input {
 
 /* Form validation states */
 .is-valid {
-  border-color: var(--mossy-river) !important;
+  border-color: var(--mossy-blue-3) !important;
 }
 
 .is-valid:focus {
@@ -140,7 +140,7 @@ textarea.input {
 }
 
 .is-invalid {
-  border-color: var(--mossy-autumn) !important;
+  border-color: var(--mossy-salmon-2) !important;
 }
 
 .is-invalid:focus {

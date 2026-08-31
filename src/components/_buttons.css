@@ -15,76 +15,76 @@
   font-size: 1rem;
   line-height: 1.5;
   border-radius: var(--border-radius);
-  border: 2px solid var(--mossy-night);
-  background-color: var(--mossy-cream);
-  color: var(--mossy-night);
+  border: 2px solid var(--mossy-brown-1);
+  background-color: var(--mossy-grey-4);
+  color: var(--mossy-brown-1);
   transition: all var(--transition-fast);
 }
 
 /* Primary variant */
 .button-primary {
-  background-color: var(--mossy-green);
-  border-color: var(--mossy-green);
-  color: var(--mossy-cream);
+  background-color: var(--mossy-green-3);
+  border-color: var(--mossy-green-3);
+  color: var(--mossy-grey-5);
 }
 
 /* Secondary variant (default) */
 .button-secondary {
   background-color: transparent;
-  border-color: var(--mossy-green-lighter);
-  color: var(--mossy-night);
+  border-color: var(--mossy-green-5);
+  color: var(--mossy-brown-1);
 }
 
 /* Success variant */
 .button-success {
-  background-color: var(--mossy-river);
-  border-color: var(--mossy-river);
+  background-color: var(--mossy-blue-3);
+  border-color: var(--mossy-blue-3);
   color: white;
 }
 
 /* Danger variant */
 .button-danger {
-  background-color: var(--mossy-autumn);
-  border-color: var(--mossy-autumn);
+  background-color: var(--mossy-salmon-2);
+  border-color: var(--mossy-salmon-2);
   color: white;
 }
 
 /* Warning variant */
 .button-warning {
-  background-color: var(--mossy-salmon);
-  border-color: var(--mossy-salmon);
-  color: var(--mossy-night);
+  background-color: var(--mossy-salmon-3);
+  border-color: var(--mossy-salmon-3);
+  color: var(--mossy-brown-1);
 }
 
 /* Hover states */
 .button:hover {
-  background-color: var(--mossy-green);
-  border-color: var(--mossy-green);
-  color: var(--mossy-cream);
+  background-color: var(--mossy-green-3);
+  border-color: var(--mossy-green-3);
+  color: var(--mossy-grey-5);
   transform: translateY(-1px);
   box-shadow: var(--shadow-sm);
 }
 
 .button-primary:hover {
-  background-color: var(--mossy-green-light);
-  border-color: var(--mossy-green-light);
-  color: var(--mossy-cream);
+  background-color: var(--mossy-green-4);
+  border-color: var(--mossy-green-4);
+  color: var(--mossy-grey-5);
 }
 
 .button-secondary:hover {
-  background-color: var(--mossy-light-salmon);
-  border-color: var(--mossy-green-lighter);
-  color: var(--mossy-night);
+  background-color: var(--mossy-salmon-4);
+  border-color: var(--mossy-green-5);
+  color: var(--mossy-brown-1);
 }
 
 .button-success:hover {
-  background-color: #449d44;
-  border-color: #449d44;
+  background-color: var(--mossy-blue-4);
+  border-color: var(--mossy-blue-4);
 }
 
 .button-danger:hover {
-  background-color: #c9302c;
-  border-color: #c9302c;
+  background-color: var(--mossy-salmon-3);
+  border-color: var(--mossy-salmon-3);
 }
 
 .button-warning:hover {
@@ -95,9 +95,9 @@
 /* Disabled states */
 .button[disabled],
 .button[disabled]:hover {
-  background-color: var(--mossy-light-salmon);
-  border-color: var(--mossy-salmon);
-  color: var(--mossy-green-lighter);
+  background-color: var(--mossy-grey-3);
+  border-color: var(--mossy-grey-2);
+  color: var(--mossy-grey-4);
   cursor: not-allowed;
   transform: none;
   box-shadow: none;
@@ -133,21 +133,21 @@
 .button-outline,
 .button-outline-primary {
   background: transparent;
-  border-color: var(--mossy-green);
-  color: var(--mossy-green);
+  border-color: var(--mossy-green-3);
+  color: var(--mossy-green-3);
 }
 
 .button-outline:hover,
 .button-outline-primary:hover {
-  background: var(--mossy-green);
-  color: var(--mossy-cream);
+  background: var(--mossy-green-3);
+  color: var(--mossy-grey-5);
 }
 
 /* Link button */
 .button-link {
   background: none;
   border: none;
-  color: var(--mossy-green);
+  color: var(--mossy-green-3);
   text-decoration: underline;
   padding: 0;
 }
@@ -155,7 +155,7 @@
 .button-link:hover {
   background: none;
   border: none;
-  color: var(--mossy-green-light);
+  color: var(--mossy-green-4);
   transform: none;
   box-shadow: none;
 }

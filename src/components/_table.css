@@ -11,11 +11,11 @@
 .table th,
 .table td {
   padding: 0.75rem;
-  border-bottom: 1px solid var(--mossy-light-salmon);
+  border-bottom: 1px solid var(--mossy-salmon-4);
   text-align: left;
 }
 
 .table th {
   font-weight: var(--font-weight-bold);
-  background-color: var(--mossy-cream);
+  background-color: var(--mossy-grey-4);
 }

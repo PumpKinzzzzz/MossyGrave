@@ -4,15 +4,15 @@
 
 .code {
   font-family: 'Courier New', monospace;
-  background: var(--mossy-cream);
+  background: var(--mossy-grey-4);
   padding: 0.2rem 0.4rem;
   border-radius: var(--border-radius);
   font-size: 0.875em;
-  color: var(--mossy-green-lighter);
+  color: var(--mossy-green-5);
 }
 
 .code-block {
-  background: var(--mossy-cream);
+  background: var(--mossy-grey-4);
   padding: 1rem;
   border-radius: var(--border-radius);
   overflow-x: auto;
@@ -22,5 +22,5 @@
 .code-block .code {
   background: none;
   padding: 0;
-  color: var(--mossy-night);
+  color: var(--mossy-brown-1);
 }
