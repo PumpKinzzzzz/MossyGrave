@@ -24,14 +24,12 @@ mossy-grave/
 ├── src/
 │   ├── core/
 │   │   ├── _variables.css    ← CSS variables
-│   │   ├── _reset.css        ← Base styles
-│   │   └── _utilities.css    ← Utility classes
+│   │   └── _reset.css        ← Base styles
 │   ├── components/
 │   │   ├── _buttons.css
 │   │   ├── _forms.css
-│   │   ├── _navbar.css
+│   │   ├── _sidebar.css
 │   │   ├── _cards.css
-│   │   ├── _grid.css
 │   │   ├── _typography.css
 │   │   ├── _badges.css
 │   │   ├── _alerts.css

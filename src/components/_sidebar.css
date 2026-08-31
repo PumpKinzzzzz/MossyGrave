@@ -1,0 +1,105 @@
+/* ============================================
+   SIDEBAR
+   ============================================ */
+
+/* Fixed vertical sidebar for a desktop app window.
+   No submenus, no responsive burger — this is a single
+   fixed-width rail, not a collapsible web navbar. */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: var(--sidebar-width);
+  background-color: var(--mossy-green);
+  box-shadow: var(--shadow-md);
+  z-index: var(--z-fixed);
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+}
+
+/* Brand / logo */
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  color: var(--mossy-cream);
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-black);
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.sidebar-brand:hover {
+  color: var(--mossy-cream);
+}
+
+/* Nav list */
+.sidebar-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+}
+
+.sidebar-nav li {
+  list-style: none;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 10px 18px;
+  color: var(--mossy-cream);
+  text-decoration: none;
+  transition: background-color var(--transition-fast);
+  font-family: var(--font-body);
+  font-size: 0.9em;
+  white-space: nowrap;
+}
+
+.sidebar-link:hover,
+.sidebar-link:focus {
+  background-color: var(--mossy-green-light);
+  color: var(--mossy-cream);
+}
+
+/* Active state */
+.sidebar-link.active {
+  background-color: var(--mossy-green-lighter);
+  font-weight: var(--font-weight-bold);
+}
+
+/* Icon slot (emoji, inline SVG, icon font — sidebar stays
+   layout-agnostic about what fills it) */
+.sidebar-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+}
+
+/* Optional footer area (settings, account, ...) */
+.sidebar-footer {
+  padding: 10px 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ===== LAYOUT HELPER ===== */
+body.has-sidebar {
+  margin: 0;
+  padding-left: var(--sidebar-width);
+  padding-top: var(--content-spacing);
+  padding-right: var(--content-spacing);
+  padding-bottom: var(--content-spacing);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
