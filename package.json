@@ -12,14 +12,21 @@
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
+    "chokidar-cli": "^3.0.0",
     "clean-css-cli": "^5.6.2"
   },
   "scripts": {
     "build": "cat node_modules/normalize.css/normalize.css src/core/_variables.css src/core/_reset.css src/core/_utilities.css src/components/*.css > dist/mossy-grave.css",
     "minify": "cleancss -o dist/mossy-grave.min.css dist/mossy-grave.css",
-    "build:production": "npm run build && npm run minify"
+    "build:production": "npm run build && npm run minify",
+    "watch": "chokidar \"src/**/*.css\" -c \"npm run build\""
   },
-  "keywords": ["css", "framework", "lightweight", "earthy"],
+  "keywords": [
+    "css",
+    "framework",
+    "lightweight",
+    "earthy"
+  ],
   "author": "Ton Nom",
   "license": "MIT"
 }
