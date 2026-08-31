@@ -1,7 +1,7 @@
 # MossyGrave
 
 The shared design system for Mossy Desk (Tauri + Svelte apps): design
-tokens, a self-hosted Nunito, and a component set — buttons, cards,
+tokens, a self-hosted Nunito, and a component set: buttons, cards,
 forms, alerts, modals, sidebar.
 
 ## Philosophy: everything is opt-in
