@@ -2,6 +2,36 @@
    NORMALIZE & BASE STYLES
    ============================================ */
 
+/* ===== FONTS ===== */
+/* Nunito, self-hosted (OFL-1.1) — used for both --font-heading and
+   --font-body. Verdana was never actually loaded (no @font-face, not
+   a bundled font) and isn't reliably present outside Windows, so it
+   silently fell back to the system sans-serif on Linux/most setups.
+   Files: src/core/fonts/, copied to dist/fonts/ at build time. */
+@font-face {
+  font-family: 'Nunito';
+  src: url('fonts/nunito-latin-400-normal.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('fonts/nunito-latin-700-normal.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('fonts/nunito-latin-900-normal.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Box-sizing global */
 *,
 *::before,
