@@ -15,36 +15,36 @@
 .alert-primary {
   background-color: rgba(135, 145, 71, 0.15);
   border-color: var(--mossy-green);
-  color: var(--mossy-green-700);
+  color: var(--mossy-green-lighter);
 }
 
 .alert-secondary {
-  background-color: var(--mossy-gray-100);
-  border-color: var(--mossy-gray-300);
-  color: var(--mossy-gray-600);
+  background-color: var(--mossy-cream);
+  border-color: var(--mossy-salmon);
+  color: var(--mossy-green);
 }
 
 .alert-success {
   background-color: rgba(92, 184, 92, 0.15);
-  border-color: var(--mossy-success);
+  border-color: var(--mossy-river);
   color: #3d8b3d;
 }
 
 .alert-danger {
   background-color: rgba(217, 83, 79, 0.15);
-  border-color: var(--mossy-danger);
+  border-color: var(--mossy-autumn);
   color: #a94442;
 }
 
 .alert-warning {
   background-color: rgba(240, 173, 78, 0.15);
-  border-color: var(--mossy-warning);
+  border-color: var(--mossy-salmon);
   color: #8a6d3b;
 }
 
 .alert-info {
   background-color: rgba(91, 192, 222, 0.15);
-  border-color: var(--mossy-info);
+  border-color: var(--mossy-river);
   color: #31708f;
 }
 

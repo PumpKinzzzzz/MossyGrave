@@ -33,7 +33,7 @@
 
 .navbar-brand:hover {
   color: var(--mossy-cream);
-  background-color: var(--mossy-green-600);
+  background-color: var(--mossy-green-light);
 }
 
 /* Nav items */
@@ -56,13 +56,13 @@
 
 .top-navbar > li > a:hover,
 .top-navbar > li > a:focus {
-  background-color: var(--mossy-green-600);
+  background-color: var(--mossy-green-light);
   color: var(--mossy-cream);
 }
 
 /* Active state */
 .top-navbar > li.active > a {
-  background-color: var(--mossy-green-700);
+  background-color: var(--mossy-green-lighter);
 }
 
 /* Submenu */
@@ -70,7 +70,7 @@
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: var(--mossy-green-600);
+  background-color: var(--mossy-green-light);
   list-style: none;
   padding: 0;
   margin: 0;
@@ -112,7 +112,7 @@
 
 .top-navbar .submenu li a:hover,
 .top-navbar .submenu li a:focus {
-  background-color: var(--mossy-green-700);
+  background-color: var(--mossy-green-lighter);
   padding-left: 24px;
 }
 
@@ -136,7 +136,7 @@
 }
 
 .navbar-toggle:hover {
-  background-color: var(--mossy-green-600);
+  background-color: var(--mossy-green-light);
 }
 
 /* ===== NAVBAR LAYOUT HELPERS ===== */

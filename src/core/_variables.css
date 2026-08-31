@@ -4,36 +4,19 @@
 
 :root {
   /* ===== COLORS ===== */
-  /* Main shades */
-  --mossy-cream: #f8f3f3;
-  --mossy-white: #ffffff;
-  --mossy-dark: #373535;
-  
-  /* Gray shades */
-  --mossy-gray-100: #f5f5f5;
-  --mossy-gray-200: #E1E1E1;
-  --mossy-gray-300: #B1B1B1;
-  --mossy-gray-400: #8a8888;
-  --mossy-gray-500: #6a6868;
-  --mossy-gray-600: #4a4848;
-  --mossy-gray-700: #3a3838;
-  
-  /* Moss green */
-  --mossy-green: #879147;
-  --mossy-green-600: #6d7438;
-  --mossy-green-700: #5a5f2e;
-  --mossy-green-800: #4a4f26;
-  
-  /* Peach */
-  --mossy-peach: #ffdbad;
-  --mossy-peach-dark: #f5c894;
-  
-  /* Alerts */
-  --mossy-success: #5cb85c;
-  --mossy-danger: #d9534f;
-  --mossy-warning: #f0ad4e;
-  --mossy-info: #5bc0de;
-  
+  /* Raw palette */
+  --mossy-night: #2c1304;
+  --mossy-wood: #88451f;
+  --mossy-cream: #e5dcd4;
+  --mossy-autumn: #ff5643;
+  --mossy-salmon: #ff8c6e;
+  --mossy-light-salmon: #ffab87;
+  --mossy-dark-green: #343b07;
+  --mossy-green: #4d5313;
+  --mossy-green-light: #646b1f;
+  --mossy-green-lighter: #7c8337;
+  --mossy-river: #68a599;
+
   /* ===== DIMENSIONS ===== */
   --navbar-height: 45px;
   --content-spacing: 1.5rem;

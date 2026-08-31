@@ -9,14 +9,14 @@
 .text-justify { text-align: justify; }
 
 /* ===== TEXT COLORS ===== */
-.text-muted { color: var(--mossy-gray-500); }
+.text-muted { color: var(--mossy-wood); }
 .text-green { color: var(--mossy-green); }
-.text-dark { color: var(--mossy-dark); }
-.text-white { color: var(--mossy-white); }
-.text-danger { color: var(--mossy-danger); }
-.text-success { color: var(--mossy-success); }
-.text-warning { color: var(--mossy-warning); }
-.text-info { color: var(--mossy-info); }
+.text-dark { color: var(--mossy-night); }
+.text-white { color: var(--mossy-cream); }
+.text-danger { color: var(--mossy-autumn); }
+.text-success { color: var(--mossy-river); }
+.text-warning { color: var(--mossy-salmon); }
+.text-info { color: var(--mossy-river); }
 
 /* ===== FONT WEIGHT ===== */
 .font-normal { font-weight: var(--font-weight-normal); }
@@ -189,7 +189,7 @@
 .shadow-xl { box-shadow: var(--shadow-xl); }
 .shadow-none { box-shadow: none; }
 
-.border { border: 1px solid var(--mossy-gray-200); }
+.border { border: 1px solid var(--mossy-light-salmon); }
 .border-0 { border: 0; }
 .border-green { border-color: var(--mossy-green); }
 

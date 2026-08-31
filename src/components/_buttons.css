@@ -19,9 +19,9 @@ input[type="button"] {
   font-size: 1rem;
   line-height: 1.5;
   border-radius: var(--border-radius);
-  border: 2px solid var(--mossy-dark);
+  border: 2px solid var(--mossy-night);
   background-color: var(--mossy-cream);
-  color: var(--mossy-dark);
+  color: var(--mossy-night);
   transition: all var(--transition-fast);
 }
 
@@ -37,32 +37,32 @@ button.button-primary {
 .button.button-secondary,
 button.button-secondary {
   background-color: transparent;
-  border-color: var(--mossy-gray-400);
-  color: var(--mossy-dark);
+  border-color: var(--mossy-green-lighter);
+  color: var(--mossy-night);
 }
 
 /* Success variant */
 .button.button-success,
 button.button-success {
-  background-color: var(--mossy-success);
-  border-color: var(--mossy-success);
+  background-color: var(--mossy-river);
+  border-color: var(--mossy-river);
   color: white;
 }
 
 /* Danger variant */
 .button.button-danger,
 button.button-danger {
-  background-color: var(--mossy-danger);
-  border-color: var(--mossy-danger);
+  background-color: var(--mossy-autumn);
+  border-color: var(--mossy-autumn);
   color: white;
 }
 
 /* Warning variant */
 .button.button-warning,
 button.button-warning {
-  background-color: var(--mossy-warning);
-  border-color: var(--mossy-warning);
-  color: var(--mossy-dark);
+  background-color: var(--mossy-salmon);
+  border-color: var(--mossy-salmon);
+  color: var(--mossy-night);
 }
 
 /* Hover states */
@@ -78,16 +78,16 @@ input[type="submit"]:hover {
 
 .button.button-primary:hover,
 button.button-primary:hover {
-  background-color: var(--mossy-green-600);
-  border-color: var(--mossy-green-600);
+  background-color: var(--mossy-green-light);
+  border-color: var(--mossy-green-light);
   color: var(--mossy-cream);
 }
 
 .button.button-secondary:hover,
 button.button-secondary:hover {
-  background-color: var(--mossy-gray-200);
-  border-color: var(--mossy-gray-400);
-  color: var(--mossy-dark);
+  background-color: var(--mossy-light-salmon);
+  border-color: var(--mossy-green-lighter);
+  color: var(--mossy-night);
 }
 
 .button.button-success:hover,
@@ -114,9 +114,9 @@ button[disabled],
 input[type="submit"][disabled],
 .button[disabled]:hover,
 button[disabled]:hover {
-  background-color: var(--mossy-gray-200);
-  border-color: var(--mossy-gray-300);
-  color: var(--mossy-gray-400);
+  background-color: var(--mossy-light-salmon);
+  border-color: var(--mossy-salmon);
+  color: var(--mossy-green-lighter);
   cursor: not-allowed;
   transform: none;
   box-shadow: none;
@@ -195,7 +195,7 @@ button-link {
 button-link:hover {
   background: none;
   border: none;
-  color: var(--mossy-green-600);
+  color: var(--mossy-green-light);
   transform: none;
   box-shadow: none;
 }

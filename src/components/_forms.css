@@ -28,9 +28,9 @@ select {
   padding: 0.6rem 0.8rem;
   font-size: 1rem;
   line-height: 1.5;
-  color: var(--mossy-dark);
-  background-color: var(--mossy-white);
-  border: 2px solid var(--mossy-peach);
+  color: var(--mossy-night);
+  background-color: var(--mossy-cream);
+  border: 2px solid var(--mossy-light-salmon);
   border-radius: var(--border-radius);
   transition: border-color var(--transition-fast);
   font-family: var(--font-body);
@@ -53,7 +53,7 @@ select:focus {
 /* Invalid states */
 textarea:invalid,
 input:invalid {
-  border-color: var(--mossy-danger);
+  border-color: var(--mossy-autumn);
 }
 
 textarea:invalid:focus,
@@ -65,7 +65,7 @@ input:invalid:focus {
 textarea:disabled,
 input:disabled,
 select:disabled {
-  background-color: var(--mossy-gray-100);
+  background-color: var(--mossy-cream);
   cursor: not-allowed;
   opacity: 0.6;
 }
@@ -102,14 +102,14 @@ input[type="radio"] + label {
   display: block;
   margin-top: 0.3rem;
   font-size: 0.875rem;
-  color: var(--mossy-gray-500);
+  color: var(--mossy-wood);
 }
 
 .form-group .form-error {
   display: block;
   margin-top: 0.3rem;
   font-size: 0.875rem;
-  color: var(--mossy-danger);
+  color: var(--mossy-autumn);
 }
 
 /* Inline forms */
@@ -157,7 +157,7 @@ input[type="radio"] + label {
 
 /* Form validation states */
 .is-valid {
-  border-color: var(--mossy-success) !important;
+  border-color: var(--mossy-river) !important;
 }
 
 .is-valid:focus {
@@ -165,7 +165,7 @@ input[type="radio"] + label {
 }
 
 .is-invalid {
-  border-color: var(--mossy-danger) !important;
+  border-color: var(--mossy-autumn) !important;
 }
 
 .is-invalid:focus {

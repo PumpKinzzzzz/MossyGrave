@@ -10,13 +10,13 @@ a {
 }
 
 a:hover {
-  color: var(--mossy-green-600);
+  color: var(--mossy-green-light);
   text-decoration: underline;
 }
 
 a:focus {
   outline: 0;
-  color: var(--mossy-green-700);
+  color: var(--mossy-green-lighter);
 }
 
 /* ===== BLOCKQUOTE ===== */
@@ -24,7 +24,7 @@ blockquote {
   margin: 1.5rem 0;
   padding: 0.5rem 1.5rem;
   border-left: 4px solid var(--mossy-green);
-  background: var(--mossy-gray-100);
+  background: var(--mossy-cream);
   border-radius: 0 var(--border-radius) var(--border-radius) 0;
 }
 
@@ -34,7 +34,7 @@ blockquote p:last-child {
 
 blockquote footer {
   margin-top: 0.5rem;
-  color: var(--mossy-gray-500);
+  color: var(--mossy-wood);
   font-size: 0.875rem;
 }
 
@@ -87,7 +87,7 @@ blockquote footer {
 .lead {
   font-size: 1.25rem;
   font-weight: var(--font-weight-normal);
-  color: var(--mossy-gray-600);
+  color: var(--mossy-green);
 }
 
 /* ===== SMALL ===== */
@@ -99,7 +99,7 @@ small,
 /* ===== MARK ===== */
 mark,
 .mark {
-  background-color: var(--mossy-peach);
+  background-color: var(--mossy-light-salmon);
   padding: 0.1rem 0.3rem;
   border-radius: var(--border-radius);
 }
@@ -112,7 +112,7 @@ abbr[title] {
 
 /* ===== KBD ===== */
 kbd {
-  background: var(--mossy-dark);
+  background: var(--mossy-night);
   color: var(--mossy-cream);
   padding: 0.2rem 0.6rem;
   border-radius: var(--border-radius);
