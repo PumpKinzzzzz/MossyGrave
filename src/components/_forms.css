@@ -2,27 +2,15 @@
    FORMS
    ============================================ */
 
-label {
+.label {
   display: inline-block;
   margin-bottom: 0.4rem;
   font-weight: var(--font-weight-bold);
   font-family: var(--font-heading);
 }
 
-input[type="email"],
-input[type="number"],
-input[type="search"],
-input[type="text"],
-input[type="tel"],
-input[type="url"],
-input[type="password"],
-input[type="date"],
-input[type="datetime-local"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-textarea,
-select {
+/* Add .input to any <input>, <textarea> or <select> you want themed */
+.input {
   display: block;
   width: 100%;
   padding: 0.6rem 0.8rem;
@@ -36,43 +24,36 @@ select {
   font-family: var(--font-body);
 }
 
-textarea {
+textarea.input {
   min-height: 100px;
   resize: vertical;
 }
 
 /* Focus states */
-textarea:focus,
-input:focus,
-select:focus {
+.input:focus {
   outline: 0;
   border-color: var(--mossy-green);
   box-shadow: 0 0 0 0.2rem rgba(135, 145, 71, 0.15);
 }
 
 /* Invalid states */
-textarea:invalid,
-input:invalid {
+.input:invalid {
   border-color: var(--mossy-autumn);
 }
 
-textarea:invalid:focus,
-input:invalid:focus {
+.input:invalid:focus {
   box-shadow: 0 0 0 0.2rem rgba(217, 83, 79, 0.25);
 }
 
 /* Disabled states */
-textarea:disabled,
-input:disabled,
-select:disabled {
+.input:disabled {
   background-color: var(--mossy-cream);
   cursor: not-allowed;
   opacity: 0.6;
 }
 
-/* Checkbox & Radio */
-input[type="checkbox"],
-input[type="radio"] {
+/* Checkbox & Radio — add .form-check to <input type="checkbox|radio"> */
+.form-check {
   display: inline-block;
   width: auto;
   margin-right: 0.4rem;
@@ -80,8 +61,7 @@ input[type="radio"] {
   cursor: pointer;
 }
 
-input[type="checkbox"] + label,
-input[type="radio"] + label {
+.form-check + .label {
   display: inline;
   font-weight: var(--font-weight-normal);
   margin-bottom: 0;
@@ -93,7 +73,7 @@ input[type="radio"] + label {
   margin-bottom: 1.2rem;
 }
 
-.form-group label {
+.form-group .label {
   display: block;
   margin-bottom: 0.3rem;
 }
@@ -126,13 +106,12 @@ input[type="radio"] + label {
   margin-bottom: 0;
 }
 
-.form-inline .form-group label {
+.form-inline .form-group .label {
   margin-bottom: 0;
   margin-right: 0.5rem;
 }
 
-.form-inline .form-group input,
-.form-inline .form-group select {
+.form-inline .form-group .input {
   width: auto;
   flex: 1 1 auto;
 }
@@ -144,7 +123,7 @@ input[type="radio"] + label {
   align-items: center;
 }
 
-.form-horizontal .form-group label {
+.form-horizontal .form-group .label {
   width: 30%;
   padding-right: 1rem;
   text-align: right;
@@ -174,24 +153,23 @@ input[type="radio"] + label {
     flex-direction: column;
     align-items: stretch;
   }
-  
+
   .form-inline .form-group {
     flex-direction: column;
     align-items: stretch;
     width: 100%;
   }
-  
-  .form-inline .form-group label {
+
+  .form-inline .form-group .label {
     margin-bottom: 0.3rem;
     margin-right: 0;
   }
-  
-  .form-inline .form-group input,
-  .form-inline .form-group select {
+
+  .form-inline .form-group .input {
     width: 100%;
   }
-  
-  .form-horizontal .form-group label {
+
+  .form-horizontal .form-group .label {
     width: 100%;
     text-align: left;
     padding-right: 0;

@@ -1,0 +1,52 @@
+/* ============================================
+   APP SHELL
+   ============================================ */
+
+/* Whole-page/whole-window opt-ins — each applies to whatever
+   container you put the class on, not just <body>. Nothing here
+   is automatic; add only what you want. */
+
+/* ===== BASE THEME ===== */
+/* Font, colors, background. Add once on your root element, e.g.
+   <body class="app">. */
+.app {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: var(--line-height-base);
+  background-color: var(--mossy-cream);
+  color: var(--mossy-night);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== SELECTION ===== */
+/* Apply to any container, e.g. <body class="selection"> */
+.selection::selection {
+  background: var(--mossy-green);
+  color: var(--mossy-cream);
+}
+
+/* ===== SCROLLBAR ===== */
+/* Apply to any scrollable container */
+.scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  background: var(--mossy-cream);
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background: var(--mossy-green);
+  border-radius: var(--border-radius);
+}
+
+.scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--mossy-green-light);
+}
+
+/* ===== SMOOTH SCROLL ===== */
+.smooth-scroll {
+  scroll-behavior: smooth;
+}

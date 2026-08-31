@@ -8,6 +8,7 @@
 /* ===== CORE ===== */
 @import url('core/_variables.css');
 @import url('core/_reset.css');
+@import url('core/_app-shell.css');
 
 /* ===== COMPONENTS ===== */
 @import url('components/_buttons.css');
@@ -15,6 +16,9 @@
 @import url('components/_sidebar.css');
 @import url('components/_cards.css');
 @import url('components/_typography.css');
+@import url('components/_code.css');
+@import url('components/_table.css');
+@import url('components/_image.css');
 @import url('components/_badges.css');
 @import url('components/_alerts.css');
 @import url('components/_modals.css');

@@ -45,14 +45,20 @@
   --z-fixed: 1030;
   --z-modal-backdrop: 1040;
 }/* ============================================
-   NORMALIZE & BASE STYLES
+   RESET
    ============================================ */
 
+/* Pure structural reset — box-model normalization only. No visual
+   opinion lives here: no colors, no fonts, no themed defaults on
+   bare tags. That's all opt-in, behind classes, in _typography.css
+   and the component partials. Nothing in this file changes how a
+   plain unstyled page looks beyond removing browser cruft. */
+
 /* ===== FONTS ===== */
-/* Nunito, self-hosted (OFL-1.1) — used for both --font-heading and
-   --font-body. Verdana was never actually loaded (no @font-face, not
-   a bundled font) and isn't reliably present outside Windows, so it
-   silently fell back to the system sans-serif on Linux/most setups.
+/* Registers Nunito so it's available via var(--font-heading) /
+   var(--font-body). Declaring a @font-face renders nothing by
+   itself — using the font is still opt-in through whichever class
+   references the token.
    Files: src/core/fonts/, copied to dist/fonts/ at build time. */
 @font-face {
   font-family: 'Nunito';
@@ -85,19 +91,31 @@
   box-sizing: border-box;
 }
 
-/* Reset margins et paddings de base */
+/* Remove default UA margin/padding */
 html,
 body {
   margin: 0;
   padding: 0;
 }
 
+/* Anchors the rem scale to --font-size-base (16px by default —
+   matches the UA default, so this changes nothing unless you edit
+   the token yourself). */
 html {
-  scroll-behavior: smooth;
   font-size: var(--font-size-base);
 }
+/* ============================================
+   APP SHELL
+   ============================================ */
 
-body {
+/* Whole-page/whole-window opt-ins — each applies to whatever
+   container you put the class on, not just <body>. Nothing here
+   is automatic; add only what you want. */
+
+/* ===== BASE THEME ===== */
+/* Font, colors, background. Add once on your root element, e.g.
+   <body class="app">. */
+.app {
   font-family: var(--font-body);
   font-size: 1rem;
   line-height: var(--line-height-base);
@@ -107,119 +125,38 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* ===== TYPOGRAPHIE BASE ===== */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
-  font-weight: var(--font-weight-black);
-  color: var(--mossy-night);
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  line-height: 1.2;
-}
-
-h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; }
-h3 { font-size: 1.75rem; }
-h4 { font-size: 1.5rem; }
-h5 { font-size: 1.25rem; }
-h6 { font-size: 1rem; }
-
-p {
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
-
-small {
-  font-size: 0.875em;
-}
-
-/* ===== LISTES ===== */
-ul, ol {
-  padding-left: 1.5rem;
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
-
-/* ===== IMAGES ===== */
-img {
-  max-width: 100%;
-  height: auto;
-  vertical-align: middle;
-}
-
-/* ===== HR ===== */
-hr {
-  margin: 1.5rem 0;
-  border: 0;
-  border-top: 1px solid var(--mossy-light-salmon);
-}
-
-/* ===== CODE ===== */
-code {
-  font-family: 'Courier New', monospace;
-  background: var(--mossy-cream);
-  padding: 0.2rem 0.4rem;
-  border-radius: var(--border-radius);
-  font-size: 0.875em;
-  color: var(--mossy-green-lighter);
-}
-
-pre {
-  background: var(--mossy-cream);
-  padding: 1rem;
-  border-radius: var(--border-radius);
-  overflow-x: auto;
-  margin-bottom: 1rem;
-}
-
-pre code {
-  background: none;
-  padding: 0;
-  color: var(--mossy-night);
-}
-
-/* ===== TABLES ===== */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 1rem;
-}
-
-th, td {
-  padding: 0.75rem;
-  border-bottom: 1px solid var(--mossy-light-salmon);
-  text-align: left;
-}
-
-th {
-  font-weight: var(--font-weight-bold);
-  background-color: var(--mossy-cream);
-}
-
 /* ===== SELECTION ===== */
-::selection {
+/* Apply to any container, e.g. <body class="selection"> */
+.selection::selection {
   background: var(--mossy-green);
   color: var(--mossy-cream);
 }
 
 /* ===== SCROLLBAR ===== */
-::-webkit-scrollbar {
+/* Apply to any scrollable container */
+.scrollbar::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
-::-webkit-scrollbar-track {
+.scrollbar::-webkit-scrollbar-track {
   background: var(--mossy-cream);
 }
 
-::-webkit-scrollbar-thumb {
+.scrollbar::-webkit-scrollbar-thumb {
   background: var(--mossy-green);
   border-radius: var(--border-radius);
 }
 
-::-webkit-scrollbar-thumb:hover {
+.scrollbar::-webkit-scrollbar-thumb:hover {
   background: var(--mossy-green-light);
-}/* ============================================
+}
+
+/* ===== SMOOTH SCROLL ===== */
+.smooth-scroll {
+  scroll-behavior: smooth;
+}
+/* ============================================
    ALERTS
    ============================================ */
 
@@ -306,11 +243,7 @@ th {
    BUTTONS
    ============================================ */
 
-.button,
-button,
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
+.button {
   display: inline-block;
   font-family: var(--font-heading);
   font-weight: var(--font-weight-black);
@@ -330,49 +263,42 @@ input[type="button"] {
 }
 
 /* Primary variant */
-.button.button-primary,
-button.button-primary {
+.button-primary {
   background-color: var(--mossy-green);
   border-color: var(--mossy-green);
   color: var(--mossy-cream);
 }
 
 /* Secondary variant (default) */
-.button.button-secondary,
-button.button-secondary {
+.button-secondary {
   background-color: transparent;
   border-color: var(--mossy-green-lighter);
   color: var(--mossy-night);
 }
 
 /* Success variant */
-.button.button-success,
-button.button-success {
+.button-success {
   background-color: var(--mossy-river);
   border-color: var(--mossy-river);
   color: white;
 }
 
 /* Danger variant */
-.button.button-danger,
-button.button-danger {
+.button-danger {
   background-color: var(--mossy-autumn);
   border-color: var(--mossy-autumn);
   color: white;
 }
 
 /* Warning variant */
-.button.button-warning,
-button.button-warning {
+.button-warning {
   background-color: var(--mossy-salmon);
   border-color: var(--mossy-salmon);
   color: var(--mossy-night);
 }
 
 /* Hover states */
-.button:hover,
-button:hover,
-input[type="submit"]:hover {
+.button:hover {
   background-color: var(--mossy-green);
   border-color: var(--mossy-green);
   color: var(--mossy-cream);
@@ -380,44 +306,36 @@ input[type="submit"]:hover {
   box-shadow: var(--shadow-sm);
 }
 
-.button.button-primary:hover,
-button.button-primary:hover {
+.button-primary:hover {
   background-color: var(--mossy-green-light);
   border-color: var(--mossy-green-light);
   color: var(--mossy-cream);
 }
 
-.button.button-secondary:hover,
-button.button-secondary:hover {
+.button-secondary:hover {
   background-color: var(--mossy-light-salmon);
   border-color: var(--mossy-green-lighter);
   color: var(--mossy-night);
 }
 
-.button.button-success:hover,
-button.button-success:hover {
+.button-success:hover {
   background-color: #449d44;
   border-color: #449d44;
 }
 
-.button.button-danger:hover,
-button.button-danger:hover {
+.button-danger:hover {
   background-color: #c9302c;
   border-color: #c9302c;
 }
 
-.button.button-warning:hover,
-button.button-warning:hover {
+.button-warning:hover {
   background-color: #ec971f;
   border-color: #ec971f;
 }
 
 /* Disabled states */
 .button[disabled],
-button[disabled],
-input[type="submit"][disabled],
-.button[disabled]:hover,
-button[disabled]:hover {
+.button[disabled]:hover {
   background-color: var(--mossy-light-salmon);
   border-color: var(--mossy-salmon);
   color: var(--mossy-green-lighter);
@@ -427,15 +345,12 @@ button[disabled]:hover {
 }
 
 /* Focus states */
-.button:focus,
-button:focus,
-input[type="submit"]:focus {
+.button:focus {
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(135, 145, 71, 0.4);
 }
 
-.button-primary:focus,
-button.button-primary:focus {
+.button-primary:focus {
   box-shadow: 0 0 0 0.2rem rgba(135, 145, 71, 0.5);
 }
 
@@ -484,7 +399,8 @@ button.button-primary:focus {
   color: var(--mossy-green-light);
   transform: none;
   box-shadow: none;
-}/* ============================================
+}
+/* ============================================
    CARDS
    ============================================ */
 
@@ -586,30 +502,44 @@ button.button-primary:focus {
     grid-template-columns: 1fr;
   }
 }/* ============================================
+   CODE
+   ============================================ */
+
+.code {
+  font-family: 'Courier New', monospace;
+  background: var(--mossy-cream);
+  padding: 0.2rem 0.4rem;
+  border-radius: var(--border-radius);
+  font-size: 0.875em;
+  color: var(--mossy-green-lighter);
+}
+
+.code-block {
+  background: var(--mossy-cream);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+.code-block .code {
+  background: none;
+  padding: 0;
+  color: var(--mossy-night);
+}
+/* ============================================
    FORMS
    ============================================ */
 
-label {
+.label {
   display: inline-block;
   margin-bottom: 0.4rem;
   font-weight: var(--font-weight-bold);
   font-family: var(--font-heading);
 }
 
-input[type="email"],
-input[type="number"],
-input[type="search"],
-input[type="text"],
-input[type="tel"],
-input[type="url"],
-input[type="password"],
-input[type="date"],
-input[type="datetime-local"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-textarea,
-select {
+/* Add .input to any <input>, <textarea> or <select> you want themed */
+.input {
   display: block;
   width: 100%;
   padding: 0.6rem 0.8rem;
@@ -623,43 +553,36 @@ select {
   font-family: var(--font-body);
 }
 
-textarea {
+textarea.input {
   min-height: 100px;
   resize: vertical;
 }
 
 /* Focus states */
-textarea:focus,
-input:focus,
-select:focus {
+.input:focus {
   outline: 0;
   border-color: var(--mossy-green);
   box-shadow: 0 0 0 0.2rem rgba(135, 145, 71, 0.15);
 }
 
 /* Invalid states */
-textarea:invalid,
-input:invalid {
+.input:invalid {
   border-color: var(--mossy-autumn);
 }
 
-textarea:invalid:focus,
-input:invalid:focus {
+.input:invalid:focus {
   box-shadow: 0 0 0 0.2rem rgba(217, 83, 79, 0.25);
 }
 
 /* Disabled states */
-textarea:disabled,
-input:disabled,
-select:disabled {
+.input:disabled {
   background-color: var(--mossy-cream);
   cursor: not-allowed;
   opacity: 0.6;
 }
 
-/* Checkbox & Radio */
-input[type="checkbox"],
-input[type="radio"] {
+/* Checkbox & Radio — add .form-check to <input type="checkbox|radio"> */
+.form-check {
   display: inline-block;
   width: auto;
   margin-right: 0.4rem;
@@ -667,8 +590,7 @@ input[type="radio"] {
   cursor: pointer;
 }
 
-input[type="checkbox"] + label,
-input[type="radio"] + label {
+.form-check + .label {
   display: inline;
   font-weight: var(--font-weight-normal);
   margin-bottom: 0;
@@ -680,7 +602,7 @@ input[type="radio"] + label {
   margin-bottom: 1.2rem;
 }
 
-.form-group label {
+.form-group .label {
   display: block;
   margin-bottom: 0.3rem;
 }
@@ -713,13 +635,12 @@ input[type="radio"] + label {
   margin-bottom: 0;
 }
 
-.form-inline .form-group label {
+.form-inline .form-group .label {
   margin-bottom: 0;
   margin-right: 0.5rem;
 }
 
-.form-inline .form-group input,
-.form-inline .form-group select {
+.form-inline .form-group .input {
   width: auto;
   flex: 1 1 auto;
 }
@@ -731,7 +652,7 @@ input[type="radio"] + label {
   align-items: center;
 }
 
-.form-horizontal .form-group label {
+.form-horizontal .form-group .label {
   width: 30%;
   padding-right: 1rem;
   text-align: right;
@@ -761,30 +682,39 @@ input[type="radio"] + label {
     flex-direction: column;
     align-items: stretch;
   }
-  
+
   .form-inline .form-group {
     flex-direction: column;
     align-items: stretch;
     width: 100%;
   }
-  
-  .form-inline .form-group label {
+
+  .form-inline .form-group .label {
     margin-bottom: 0.3rem;
     margin-right: 0;
   }
-  
-  .form-inline .form-group input,
-  .form-inline .form-group select {
+
+  .form-inline .form-group .input {
     width: 100%;
   }
-  
-  .form-horizontal .form-group label {
+
+  .form-horizontal .form-group .label {
     width: 100%;
     text-align: left;
     padding-right: 0;
     margin-bottom: 0.3rem;
   }
-}/* ============================================
+}
+/* ============================================
+   IMAGE
+   ============================================ */
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+/* ============================================
    MODALS
    ============================================ */
 
@@ -837,6 +767,9 @@ input[type="radio"] + label {
 .modal-header h3,
 .modal-header h4 {
   margin: 0;
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-black);
+  color: var(--mossy-night);
 }
 
 .modal-close {
@@ -1005,28 +938,77 @@ body.has-sidebar {
   box-sizing: border-box;
 }
 /* ============================================
+   TABLE
+   ============================================ */
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.table th,
+.table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--mossy-light-salmon);
+  text-align: left;
+}
+
+.table th {
+  font-weight: var(--font-weight-bold);
+  background-color: var(--mossy-cream);
+}
+/* ============================================
    TYPOGRAPHY
    ============================================ */
 
+/* Everything below is opt-in — nothing applies until you add the
+   class. Bare <h1>, <a>, <hr>, ... render as plain browser
+   defaults unless you explicitly opt them into the Mossy look. */
+
+/* ===== HEADINGS ===== */
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-black);
+  color: var(--mossy-night);
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.h1 { font-size: 2.5rem; }
+.h2 { font-size: 2rem; }
+.h3 { font-size: 1.75rem; }
+.h4 { font-size: 1.5rem; }
+.h5 { font-size: 1.25rem; }
+.h6 { font-size: 1rem; }
+
 /* ===== LINKS ===== */
-a {
+.link {
   color: var(--mossy-green);
   text-decoration: none;
   transition: color var(--transition-fast);
 }
 
-a:hover {
+.link:hover {
   color: var(--mossy-green-light);
   text-decoration: underline;
 }
 
-a:focus {
+.link:focus {
   outline: 0;
   color: var(--mossy-green-lighter);
 }
 
+/* ===== DIVIDER ===== */
+.divider {
+  margin: 1.5rem 0;
+  border: 0;
+  border-top: 1px solid var(--mossy-light-salmon);
+}
+
 /* ===== BLOCKQUOTE ===== */
-blockquote {
+.blockquote {
   margin: 1.5rem 0;
   padding: 0.5rem 1.5rem;
   border-left: 4px solid var(--mossy-green);
@@ -1034,11 +1016,11 @@ blockquote {
   border-radius: 0 var(--border-radius) var(--border-radius) 0;
 }
 
-blockquote p:last-child {
+.blockquote p:last-child {
   margin-bottom: 0;
 }
 
-blockquote footer {
+.blockquote footer {
   margin-top: 0.5rem;
   color: var(--mossy-wood);
   font-size: 0.875rem;
@@ -1097,13 +1079,11 @@ blockquote footer {
 }
 
 /* ===== SMALL ===== */
-small,
 .small {
   font-size: 0.875rem;
 }
 
 /* ===== MARK ===== */
-mark,
 .mark {
   background-color: var(--mossy-light-salmon);
   padding: 0.1rem 0.3rem;
@@ -1111,13 +1091,13 @@ mark,
 }
 
 /* ===== ABBR ===== */
-abbr[title] {
+.abbr {
   text-decoration: underline dotted;
   cursor: help;
 }
 
 /* ===== KBD ===== */
-kbd {
+.kbd {
   background: var(--mossy-night);
   color: var(--mossy-cream);
   padding: 0.2rem 0.6rem;
@@ -1128,13 +1108,13 @@ kbd {
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-  h1 { font-size: 2rem; }
-  h2 { font-size: 1.75rem; }
-  h3 { font-size: 1.5rem; }
-  h4 { font-size: 1.25rem; }
-  h5 { font-size: 1.1rem; }
-  h6 { font-size: 1rem; }
-  
+  .h1 { font-size: 2rem; }
+  .h2 { font-size: 1.75rem; }
+  .h3 { font-size: 1.5rem; }
+  .h4 { font-size: 1.25rem; }
+  .h5 { font-size: 1.1rem; }
+  .h6 { font-size: 1rem; }
+
   .display-1 { font-size: 2.8rem; }
   .display-2 { font-size: 2.4rem; }
   .display-3 { font-size: 2rem; }

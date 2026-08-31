@@ -1,12 +1,18 @@
 /* ============================================
-   NORMALIZE & BASE STYLES
+   RESET
    ============================================ */
 
+/* Pure structural reset — box-model normalization only. No visual
+   opinion lives here: no colors, no fonts, no themed defaults on
+   bare tags. That's all opt-in, behind classes, in _typography.css
+   and the component partials. Nothing in this file changes how a
+   plain unstyled page looks beyond removing browser cruft. */
+
 /* ===== FONTS ===== */
-/* Nunito, self-hosted (OFL-1.1) — used for both --font-heading and
-   --font-body. Verdana was never actually loaded (no @font-face, not
-   a bundled font) and isn't reliably present outside Windows, so it
-   silently fell back to the system sans-serif on Linux/most setups.
+/* Registers Nunito so it's available via var(--font-heading) /
+   var(--font-body). Declaring a @font-face renders nothing by
+   itself — using the font is still opt-in through whichever class
+   references the token.
    Files: src/core/fonts/, copied to dist/fonts/ at build time. */
 @font-face {
   font-family: 'Nunito';
@@ -39,138 +45,16 @@
   box-sizing: border-box;
 }
 
-/* Reset margins et paddings de base */
+/* Remove default UA margin/padding */
 html,
 body {
   margin: 0;
   padding: 0;
 }
 
+/* Anchors the rem scale to --font-size-base (16px by default —
+   matches the UA default, so this changes nothing unless you edit
+   the token yourself). */
 html {
-  scroll-behavior: smooth;
   font-size: var(--font-size-base);
-}
-
-body {
-  font-family: var(--font-body);
-  font-size: 1rem;
-  line-height: var(--line-height-base);
-  background-color: var(--mossy-cream);
-  color: var(--mossy-night);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* ===== TYPOGRAPHIE BASE ===== */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
-  font-weight: var(--font-weight-black);
-  color: var(--mossy-night);
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  line-height: 1.2;
-}
-
-h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; }
-h3 { font-size: 1.75rem; }
-h4 { font-size: 1.5rem; }
-h5 { font-size: 1.25rem; }
-h6 { font-size: 1rem; }
-
-p {
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
-
-small {
-  font-size: 0.875em;
-}
-
-/* ===== LISTES ===== */
-ul, ol {
-  padding-left: 1.5rem;
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
-
-/* ===== IMAGES ===== */
-img {
-  max-width: 100%;
-  height: auto;
-  vertical-align: middle;
-}
-
-/* ===== HR ===== */
-hr {
-  margin: 1.5rem 0;
-  border: 0;
-  border-top: 1px solid var(--mossy-light-salmon);
-}
-
-/* ===== CODE ===== */
-code {
-  font-family: 'Courier New', monospace;
-  background: var(--mossy-cream);
-  padding: 0.2rem 0.4rem;
-  border-radius: var(--border-radius);
-  font-size: 0.875em;
-  color: var(--mossy-green-lighter);
-}
-
-pre {
-  background: var(--mossy-cream);
-  padding: 1rem;
-  border-radius: var(--border-radius);
-  overflow-x: auto;
-  margin-bottom: 1rem;
-}
-
-pre code {
-  background: none;
-  padding: 0;
-  color: var(--mossy-night);
-}
-
-/* ===== TABLES ===== */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 1rem;
-}
-
-th, td {
-  padding: 0.75rem;
-  border-bottom: 1px solid var(--mossy-light-salmon);
-  text-align: left;
-}
-
-th {
-  font-weight: var(--font-weight-bold);
-  background-color: var(--mossy-cream);
-}
-
-/* ===== SELECTION ===== */
-::selection {
-  background: var(--mossy-green);
-  color: var(--mossy-cream);
-}
-
-/* ===== SCROLLBAR ===== */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--mossy-cream);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--mossy-green);
-  border-radius: var(--border-radius);
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--mossy-green-light);
 }

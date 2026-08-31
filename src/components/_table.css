@@ -1,0 +1,21 @@
+/* ============================================
+   TABLE
+   ============================================ */
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.table th,
+.table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--mossy-light-salmon);
+  text-align: left;
+}
+
+.table th {
+  font-weight: var(--font-weight-bold);
+  background-color: var(--mossy-cream);
+}

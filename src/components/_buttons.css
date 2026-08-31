@@ -2,11 +2,7 @@
    BUTTONS
    ============================================ */
 
-.button,
-button,
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
+.button {
   display: inline-block;
   font-family: var(--font-heading);
   font-weight: var(--font-weight-black);
@@ -26,49 +22,42 @@ input[type="button"] {
 }
 
 /* Primary variant */
-.button.button-primary,
-button.button-primary {
+.button-primary {
   background-color: var(--mossy-green);
   border-color: var(--mossy-green);
   color: var(--mossy-cream);
 }
 
 /* Secondary variant (default) */
-.button.button-secondary,
-button.button-secondary {
+.button-secondary {
   background-color: transparent;
   border-color: var(--mossy-green-lighter);
   color: var(--mossy-night);
 }
 
 /* Success variant */
-.button.button-success,
-button.button-success {
+.button-success {
   background-color: var(--mossy-river);
   border-color: var(--mossy-river);
   color: white;
 }
 
 /* Danger variant */
-.button.button-danger,
-button.button-danger {
+.button-danger {
   background-color: var(--mossy-autumn);
   border-color: var(--mossy-autumn);
   color: white;
 }
 
 /* Warning variant */
-.button.button-warning,
-button.button-warning {
+.button-warning {
   background-color: var(--mossy-salmon);
   border-color: var(--mossy-salmon);
   color: var(--mossy-night);
 }
 
 /* Hover states */
-.button:hover,
-button:hover,
-input[type="submit"]:hover {
+.button:hover {
   background-color: var(--mossy-green);
   border-color: var(--mossy-green);
   color: var(--mossy-cream);
@@ -76,44 +65,36 @@ input[type="submit"]:hover {
   box-shadow: var(--shadow-sm);
 }
 
-.button.button-primary:hover,
-button.button-primary:hover {
+.button-primary:hover {
   background-color: var(--mossy-green-light);
   border-color: var(--mossy-green-light);
   color: var(--mossy-cream);
 }
 
-.button.button-secondary:hover,
-button.button-secondary:hover {
+.button-secondary:hover {
   background-color: var(--mossy-light-salmon);
   border-color: var(--mossy-green-lighter);
   color: var(--mossy-night);
 }
 
-.button.button-success:hover,
-button.button-success:hover {
+.button-success:hover {
   background-color: #449d44;
   border-color: #449d44;
 }
 
-.button.button-danger:hover,
-button.button-danger:hover {
+.button-danger:hover {
   background-color: #c9302c;
   border-color: #c9302c;
 }
 
-.button.button-warning:hover,
-button.button-warning:hover {
+.button-warning:hover {
   background-color: #ec971f;
   border-color: #ec971f;
 }
 
 /* Disabled states */
 .button[disabled],
-button[disabled],
-input[type="submit"][disabled],
-.button[disabled]:hover,
-button[disabled]:hover {
+.button[disabled]:hover {
   background-color: var(--mossy-light-salmon);
   border-color: var(--mossy-salmon);
   color: var(--mossy-green-lighter);
@@ -123,15 +104,12 @@ button[disabled]:hover {
 }
 
 /* Focus states */
-.button:focus,
-button:focus,
-input[type="submit"]:focus {
+.button:focus {
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(135, 145, 71, 0.4);
 }
 
-.button-primary:focus,
-button.button-primary:focus {
+.button-primary:focus {
   box-shadow: 0 0 0 0.2rem rgba(135, 145, 71, 0.5);
 }
 

@@ -51,6 +51,9 @@
 .modal-header h3,
 .modal-header h4 {
   margin: 0;
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-black);
+  color: var(--mossy-night);
 }
 
 .modal-close {

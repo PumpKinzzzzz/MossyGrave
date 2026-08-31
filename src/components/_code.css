@@ -1,0 +1,26 @@
+/* ============================================
+   CODE
+   ============================================ */
+
+.code {
+  font-family: 'Courier New', monospace;
+  background: var(--mossy-cream);
+  padding: 0.2rem 0.4rem;
+  border-radius: var(--border-radius);
+  font-size: 0.875em;
+  color: var(--mossy-green-lighter);
+}
+
+.code-block {
+  background: var(--mossy-cream);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+.code-block .code {
+  background: none;
+  padding: 0;
+  color: var(--mossy-night);
+}

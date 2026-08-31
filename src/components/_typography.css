@@ -2,25 +2,53 @@
    TYPOGRAPHY
    ============================================ */
 
+/* Everything below is opt-in — nothing applies until you add the
+   class. Bare <h1>, <a>, <hr>, ... render as plain browser
+   defaults unless you explicitly opt them into the Mossy look. */
+
+/* ===== HEADINGS ===== */
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-black);
+  color: var(--mossy-night);
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.h1 { font-size: 2.5rem; }
+.h2 { font-size: 2rem; }
+.h3 { font-size: 1.75rem; }
+.h4 { font-size: 1.5rem; }
+.h5 { font-size: 1.25rem; }
+.h6 { font-size: 1rem; }
+
 /* ===== LINKS ===== */
-a {
+.link {
   color: var(--mossy-green);
   text-decoration: none;
   transition: color var(--transition-fast);
 }
 
-a:hover {
+.link:hover {
   color: var(--mossy-green-light);
   text-decoration: underline;
 }
 
-a:focus {
+.link:focus {
   outline: 0;
   color: var(--mossy-green-lighter);
 }
 
+/* ===== DIVIDER ===== */
+.divider {
+  margin: 1.5rem 0;
+  border: 0;
+  border-top: 1px solid var(--mossy-light-salmon);
+}
+
 /* ===== BLOCKQUOTE ===== */
-blockquote {
+.blockquote {
   margin: 1.5rem 0;
   padding: 0.5rem 1.5rem;
   border-left: 4px solid var(--mossy-green);
@@ -28,11 +56,11 @@ blockquote {
   border-radius: 0 var(--border-radius) var(--border-radius) 0;
 }
 
-blockquote p:last-child {
+.blockquote p:last-child {
   margin-bottom: 0;
 }
 
-blockquote footer {
+.blockquote footer {
   margin-top: 0.5rem;
   color: var(--mossy-wood);
   font-size: 0.875rem;
@@ -91,13 +119,11 @@ blockquote footer {
 }
 
 /* ===== SMALL ===== */
-small,
 .small {
   font-size: 0.875rem;
 }
 
 /* ===== MARK ===== */
-mark,
 .mark {
   background-color: var(--mossy-light-salmon);
   padding: 0.1rem 0.3rem;
@@ -105,13 +131,13 @@ mark,
 }
 
 /* ===== ABBR ===== */
-abbr[title] {
+.abbr {
   text-decoration: underline dotted;
   cursor: help;
 }
 
 /* ===== KBD ===== */
-kbd {
+.kbd {
   background: var(--mossy-night);
   color: var(--mossy-cream);
   padding: 0.2rem 0.6rem;
@@ -122,13 +148,13 @@ kbd {
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-  h1 { font-size: 2rem; }
-  h2 { font-size: 1.75rem; }
-  h3 { font-size: 1.5rem; }
-  h4 { font-size: 1.25rem; }
-  h5 { font-size: 1.1rem; }
-  h6 { font-size: 1rem; }
-  
+  .h1 { font-size: 2rem; }
+  .h2 { font-size: 1.75rem; }
+  .h3 { font-size: 1.5rem; }
+  .h4 { font-size: 1.25rem; }
+  .h5 { font-size: 1.1rem; }
+  .h6 { font-size: 1rem; }
+
   .display-1 { font-size: 2.8rem; }
   .display-2 { font-size: 2.4rem; }
   .display-3 { font-size: 2rem; }
