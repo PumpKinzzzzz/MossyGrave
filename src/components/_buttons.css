@@ -136,54 +136,37 @@ button.button-primary:focus {
 }
 
 /* Sizes */
-.button-sm,
-button-sm {
+.button-sm {
   padding: 0.3rem 0.8rem;
   font-size: 0.875rem;
 }
 
-.button-lg,
-button-lg {
+.button-lg {
   padding: 0.8rem 1.8rem;
   font-size: 1.125rem;
 }
 
-.button-block,
-button-block {
+.button-block {
   display: block;
   width: 100%;
 }
 
-/* Outline variants */
+/* Outline variant */
 .button-outline,
-button-outline {
+.button-outline-primary {
   background: transparent;
   border-color: var(--mossy-green);
   color: var(--mossy-green);
 }
 
 .button-outline:hover,
-button-outline:hover {
-  background: var(--mossy-green);
-  color: var(--mossy-cream);
-}
-
-.button-outline-primary,
-button-outline-primary {
-  background: transparent;
-  border-color: var(--mossy-green);
-  color: var(--mossy-green);
-}
-
-.button-outline-primary:hover,
-button-outline-primary:hover {
+.button-outline-primary:hover {
   background: var(--mossy-green);
   color: var(--mossy-cream);
 }
 
 /* Link button */
-.button-link,
-button-link {
+.button-link {
   background: none;
   border: none;
   color: var(--mossy-green);
@@ -191,8 +174,7 @@ button-link {
   padding: 0;
 }
 
-.button-link:hover,
-button-link:hover {
+.button-link:hover {
   background: none;
   border: none;
   color: var(--mossy-green-light);

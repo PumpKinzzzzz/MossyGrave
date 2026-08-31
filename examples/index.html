@@ -77,7 +77,45 @@
         <div class="alert alert-danger">
             Erreur ! Quelque chose ne va pas.
         </div>
+
+        <!-- ===== MODALS ===== -->
+        <h2>Modals</h2>
+        <div class="btn-row">
+            <button class="button button-primary" id="modal-trigger">Ouvrir la modale</button>
+        </div>
     </main>
 
+    <!-- La modale reste dans le DOM, cachée par défaut (pas de .active) -->
+    <div class="modal-overlay" id="demo-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Confirmer la suppression</h3>
+                <button class="modal-close" data-modal-close>&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Cette action est irréversible. Tu es sûr ?</p>
+            </div>
+            <div class="modal-footer">
+                <button class="button" data-modal-close>Annuler</button>
+                <button class="button button-danger" data-modal-close>Supprimer</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Toggle .active sur .modal-overlay — toute l'animation est en CSS
+        const overlay = document.getElementById('demo-modal');
+        document.getElementById('modal-trigger').addEventListener('click', () => {
+            overlay.classList.add('active');
+        });
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay || e.target.closest('[data-modal-close]')) {
+                overlay.classList.remove('active');
+            }
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') overlay.classList.remove('active');
+        });
+    </script>
 </body>
 </html>

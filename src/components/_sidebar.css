@@ -36,7 +36,7 @@
 }
 
 .sidebar-brand:hover {
-  color: var(--mossy-cream);
+  background-color: var(--mossy-green-light);
 }
 
 /* Nav list */

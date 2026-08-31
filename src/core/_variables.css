@@ -11,7 +11,6 @@
   --mossy-autumn: #ff5643;
   --mossy-salmon: #ff8c6e;
   --mossy-light-salmon: #ffab87;
-  --mossy-dark-green: #343b07;
   --mossy-green: #4d5313;
   --mossy-green-light: #646b1f;
   --mossy-green-lighter: #7c8337;
@@ -32,8 +31,7 @@
   /* ===== TRANSITIONS ===== */
   --transition-fast: 0.15s ease;
   --transition-normal: 0.3s ease;
-  --transition-slow: 0.5s ease;
-  
+
   /* ===== TYPOGRAPHY ===== */
   --font-heading: 'Nunito', sans-serif;
   --font-body: Verdana, Geneva, sans-serif;
@@ -44,11 +42,6 @@
   --font-weight-black: 900;
   
   /* ===== Z-INDEX ===== */
-  --z-dropdown: 1000;
-  --z-sticky: 1020;
   --z-fixed: 1030;
   --z-modal-backdrop: 1040;
-  --z-modal: 1050;
-  --z-popover: 1060;
-  --z-tooltip: 1070;
 }

@@ -151,10 +151,6 @@ input[type="radio"] + label {
   margin-bottom: 0;
 }
 
-.form-horizontal .form-group .form-control {
-  width: 70%;
-}
-
 /* Form validation states */
 .is-valid {
   border-color: var(--mossy-river) !important;
@@ -200,9 +196,5 @@ input[type="radio"] + label {
     text-align: left;
     padding-right: 0;
     margin-bottom: 0.3rem;
-  }
-  
-  .form-horizontal .form-group .form-control {
-    width: 100%;
   }
 }

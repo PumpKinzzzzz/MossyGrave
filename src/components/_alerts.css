@@ -48,16 +48,11 @@
   color: #31708f;
 }
 
-/* Alert with icon */
+/* Alert with icon (add your own icon element as first child) */
 .alert-icon {
   display: flex;
   align-items: center;
   gap: 0.8rem;
-}
-
-.alert-icon::before {
-  font-size: 1.5rem;
-  line-height: 1;
 }
 
 /* Dismissible alert */
