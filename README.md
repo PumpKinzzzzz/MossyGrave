@@ -1,19 +1,14 @@
 # MossyGrave
 
-A CSS design system for Mossy Desk (Tauri + Svelte apps): design tokens,
-Nunito self-hosted, and a set of components (buttons, cards, forms,
-alerts, modals, sidebar...).
+The shared design system for Mossy Desk (Tauri + Svelte apps): design
+tokens, a self-hosted Nunito, and a component set: buttons, cards,
+forms, alerts, modals, sidebar.
 
 ## Philosophy: everything is opt-in
 
-Nothing applies automatically — not even on `<h1>`, `<a>`, `<button>` or
-`<input>`. A bare tag renders as plain browser default until you add the
-matching class (`.h1`, `.link`, `.button`, `.input`, ...). This keeps the
-library safe to drop into any app: nothing you didn't ask for changes,
-and no fighting the framework to get a custom element to look custom.
-
-The only page-wide opt-in is `.app` on your root element (theme:
-font/colors/background) — everything else is per-element.
+Nothing applies until you add the class. A bare `<h1>`, `<a>`,
+`<button>`, `<input>` renders as plain browser default. Add `.h1`,
+`.link`, `.button`, `.input` and it becomes ours.
 
 ```html
 <body class="app">
@@ -21,6 +16,9 @@ font/colors/background) — everything else is per-element.
   <button class="button button-primary">Go</button>
 </body>
 ```
+
+`.app` on the root element sets the page theme (font, colors,
+background). Everything else is per-element.
 
 ## Installation
 
